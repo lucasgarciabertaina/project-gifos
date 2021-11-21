@@ -14,7 +14,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 95px;
-  border-top: solid 2px #572ee5;
+  border-top: solid 5px #572ee5;
 }
 
 header div {
@@ -38,6 +38,14 @@ header nav {
 
 header nav div {
   margin: 0;
+}
+
+header nav div input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  z-index: 101;
+  position: absolute;
+  opacity: 0;
 }
 
 header nav ul {
