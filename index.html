@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIFOS</title>
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="/styles/phone_style.css" media="screen and (min-width: 375px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css" media="screen and (min-width: 375px)">
 </head>
 <body>
     <header>
@@ -15,15 +18,16 @@
             <img class="logo" src="./images/logo-mobile.svg" alt="logo-gifos">
         </div>
         <nav>
+            <input type="checkbox">
+            <span class="burger"></span>
             <ul>
-                <li><a href="#">MODO NOCTURNO</a></li>
-                <li><a href="#">FAVORITOS</a></li>
-                <li><a href="#">MIS GIFOS</a></li>
+                <li><a href="#">Modo Nocturno</a></li>
+                <span class="line"></span>
+                <li><a href="#">Favoritos</a></li>
+                <span class="line"></span>
+                <li><a href="#">Mis Gifos</a></li>
+                <span class="line"></span>
             </ul>
-            <div>
-                <input type="checkbox">
-                <img src="./images/burger.svg" alt="menu-burger">
-            </div>
         </nav>
     </header>
 </body>
