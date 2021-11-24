@@ -11,9 +11,8 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  width: 100vw;
-  height: 100vh;
   color: #572ee5;
+  width: 100%;
 }
 
 header {
@@ -24,18 +23,19 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 95px;
+  width: 100vw;
   border-top: solid 5px #572ee5;
 }
 
-header div {
+header .header__container {
   width: 20%;
 }
 
-header div .logo {
+header .header__container .logo {
   margin-left: 24px;
 }
 
-header nav {
+header .header__nav-bar {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +46,7 @@ header nav {
           flex-direction: row-reverse;
 }
 
-header nav .burger {
+header .header__nav-bar .header__burger-icon {
   margin-right: 27px;
   width: 20px;
   height: 20px;
@@ -55,7 +55,7 @@ header nav .burger {
   background-repeat: no-repeat;
 }
 
-header nav input[type="checkbox"] {
+header .header__nav-bar .header__checkbox {
   margin-right: 27px;
   width: 20px;
   height: 20px;
@@ -64,21 +64,21 @@ header nav input[type="checkbox"] {
   opacity: 0;
 }
 
-header nav input[type="checkbox"]:checked + .burger {
+header .header__nav-bar .header__checkbox:checked + .header__burger-icon {
   background-image: url("../images/close.svg");
 }
 
-header nav ul {
+header .header__nav-bar .header__elements-container {
   list-style: none;
   display: none;
 }
 
-header nav ul a {
+header .header__nav-bar .header__elements-container .header__list-element .header__list-link {
   text-decoration: none;
   color: black;
 }
 
-header nav input[type="checkbox"]:checked ~ ul {
+header .header__nav-bar .header__checkbox:checked ~ .header__elements-container {
   z-index: 101;
   position: absolute;
   background-color: #572ee5;
@@ -98,7 +98,7 @@ header nav input[type="checkbox"]:checked ~ ul {
           align-items: center;
 }
 
-header nav input[type="checkbox"]:checked ~ ul .line {
+header .header__nav-bar .header__checkbox:checked ~ .header__elements-container .header__line-of-list-elements {
   display: inline-block;
   position: relative;
   top: 14px;
@@ -108,18 +108,18 @@ header nav input[type="checkbox"]:checked ~ ul .line {
   opacity: 0.5;
 }
 
-header nav input[type="checkbox"]:checked ~ ul li {
+header .header__nav-bar .header__checkbox:checked ~ .header__elements-container .header__list-element {
   margin-top: 30px;
 }
 
-header nav input[type="checkbox"]:checked ~ ul li a {
+header .header__nav-bar .header__checkbox:checked ~ .header__elements-container .header__list-element .header__list-link {
   font-size: 1.5rem;
   text-align: center;
   color: white;
   font-weight: bold;
 }
 
-main section h1 {
+main .search-section .search-section__title {
   color: #572ee5;
   font-size: 2.5rem;
   line-height: 3.3rem;
@@ -129,18 +129,18 @@ main section h1 {
   margin-bottom: 31px;
 }
 
-main section h1 span {
+main .search-section .search-section__title .search-section__gifos-color {
   color: #50e3c2;
 }
 
-main section img {
+main .search-section .search-section__image {
   display: block;
   width: 273px;
   height: 130px;
   margin: 0 auto;
 }
 
-main section h3 {
+main .search-section .search-section__trending-title {
   margin-top: 31px;
   font-size: 1.6rem;
   text-align: center;
@@ -148,7 +148,7 @@ main section h3 {
   margin-bottom: 2px;
 }
 
-main section p {
+main .search-section .search-section__trending-paragraph {
   font-size: 1.4rem;
   text-align: center;
   line-height: 2.5rem;
@@ -156,7 +156,7 @@ main section p {
   padding-bottom: 45px;
 }
 
-main section section {
+main .search-section .search-section__search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,7 +170,7 @@ main section section {
   margin: 0 auto;
 }
 
-main section section span {
+main .search-section .search-section__search .search-section__icon-search {
   display: block;
   width: 20px;
   height: 20px;
@@ -179,7 +179,7 @@ main section section span {
   left: 294px;
 }
 
-main section section input[type=text] {
+main .search-section .search-section__search .search-section__finder {
   display: inline-block;
   width: 215px;
   height: 22px;
@@ -193,8 +193,78 @@ main .trending {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  height: 200px;
-  background-color: #FFF3F5F8;
+  height: 430px;
+  background-color: #f3f5f8;
+}
+
+main .trending .trending__title {
+  margin-top: 46px;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+main .trending .trending__paragraph {
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  color: black;
+}
+
+main .trending .trending__paragraph--top {
+  margin-bottom: 2px;
+  margin-top: 8px;
+}
+
+main .trending .trending__container {
+  display: block;
+  height: 50%;
+  background-color: black;
+}
+
+main .trending .trending__container .trending__gifo {
+  display: block;
+  width: 243px;
+  height: 187px;
+  background-color: red;
+}
+
+footer {
+  height: 196px;
+  border-bottom: 5px solid #572ee5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer__paragraph {
+  font-family: Roboto;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 47px;
+  color: black;
+}
+
+footer .footer__icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 97px;
+  height: 24px;
+}
+
+footer .footer__icons-container .footer__icon {
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

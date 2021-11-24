@@ -13,39 +13,52 @@
     <link rel="stylesheet" href="/styles/style.css" media="screen and (min-width: 375px)">
 </head>
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="header__container">
             <img class="logo" src="./images/logo-mobile.svg" alt="logo-gifos">
         </div>
-        <nav>
-            <input type="checkbox">
-            <span class="burger"></span>
-            <ul>
-                <li><a href="#">Modo Nocturno</a></li>
-                <span class="line"></span>
-                <li><a href="#">Favoritos</a></li>
-                <span class="line"></span>
-                <li><a href="#">Mis Gifos</a></li>
-                <span class="line"></span>
+        <nav class="header__nav-bar">
+            <input class="header__checkbox" type="checkbox">
+            <span class="header__burger-icon"></span>
+            <ul class="header__elements-container">
+                <li class="header__list-element"><a class="header__list-link" href="#">Modo Nocturno</a></li>
+                <span class="header__line-of-list-elements"></span>
+                <li class="header__list-element"><a class="header__list-link" href="#">Favoritos</a></li>
+                <span class="header__line-of-list-elements"></span>
+                <li class="header__list-element"><a class="header__list-link" href="#">Mis Gifos</a></li>
+                <span class="header__line-of-list-elements"></span>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
-            <img src="./images/ilustra_header.svg" alt="">
-            <section class="search">
-                <span></span>
-                <input type="text" placeholder="Busca GIFOS y más">
+        <section class="search-section">
+            <h1 class="search-section__title">Inspírate, busca, guarda, y crea los mejores <span class="search-section__gifos-color">GIFOS</span></h1>
+            <img class="search-section__image" src="./images/ilustra_header.svg" alt="">
+            <section class="search-section__search">
+                <span class="search-section__icon-search"></span>
+                <input class="search-section__finder" type="text" placeholder="Busca GIFOS y más">
             </section>
-            <h3>Trending:</h3>
-            <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+            <h3 class="search-section__trending-title">Trending:</h3>
+            <p class="search-section__trending-paragraph">Reactions, Entertainment, Sports, Stickers, Artists</p>
         </section>
 
         <section class="trending">
-
+            <h2 class="trending__title">Trending GIFOS</h2>
+            <p class="trending__paragraph trending__paragraph--top">Mira los últimos</p>
+            <p class="trending__paragraph trending__paragraph--bottom">GIFOS de nuestra comunidad.</p>
+            <section class="trending__container">
+                <div class="trending__gifo"></div>
+            </section>
         </section>
-
     </main>
+    <footer>
+        <p class="footer__paragraph">Compartir en:</p>
+        <div class="footer__icons-container">
+            <span class="footer__icon"></span>
+            <span class="footer__icon"></span>
+            <span class="footer__icon"></span>
+        </div>
+        <p class="footer__rights">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
