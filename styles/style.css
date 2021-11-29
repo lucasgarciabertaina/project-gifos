@@ -20,7 +20,6 @@ header {
   display: flex;
   align-items: center;
   height: 95px;
-  width: 100vw;
   border-top: solid 5px var(--principal_color);
 }
 .header__container{
@@ -156,13 +155,11 @@ header {
 }
 
 .trending{
-  display: flex;
-  flex-direction: column;
   height: 430px;
   background-color: rgba(243,245,248,1);
 }
 .trending__title{
-  margin-top: 46px;
+  padding-top: 46px;
   font-size: 2rem;
   line-height: 3rem;
   text-align: center;
@@ -176,22 +173,21 @@ header {
   color: black;
 }
 .trending__paragraph--top{
-  margin-bottom: 2px;
-  margin-top: 8px;   
+  padding-bottom: 2px;
+  padding-top: 8px;   
 }
 .trending__container{
-  position: relative;
   display: flex;
+  align-items: center;
+  gap: 20px;
   height: 316px;
   overflow-x: scroll;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
 } 
 .trending__gifo{
-  width: 243px;
-  height: 187px;
+  display: inline-block;
+  min-width: 260px;
+  height: 200px;
   background-color: red;
-  margin: 22px;
   scroll-snap-align: center;
 }
 
@@ -200,20 +196,44 @@ footer{
   border-bottom: 5px solid var(--principal_color);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .footer__paragraph{
   font-family: Roboto;
   font-weight: 500;
   text-align: center;
-  margin-top: 47px;
+  padding-top: 47px;
   color: black;
 }
 
 .footer__icons-container{
   display: flex;
-  width: 97px;
+  justify-content: center;
+  width: 115px;
   height: 24px;
+  padding-top: 22px;
+  padding-bottom: 47px;
 }
 .footer__icon{
-  background-repeat: no-repeat
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+}
+.footer__facebook{
+  width: 13px;
+  background-image: url('../images/icon_facebook.svg');
+}
+.footer__twitter{
+  background-image: url('../images/icon-twitter.svg');
+}
+.footer__instagram{
+  background-image: url('../images/icon_instagram.svg');
+}
+.footer__rights{
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  color: black;
+  font-family: var(--secundary_font);
 }
