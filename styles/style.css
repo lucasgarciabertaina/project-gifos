@@ -155,7 +155,7 @@ header {
 }
 
 .trending{
-  height: 430px;
+  min-height: 430px;
   background-color: rgba(243,245,248,1);
 }
 .trending__title{
