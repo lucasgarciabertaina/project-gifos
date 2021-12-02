@@ -183,12 +183,22 @@ header {
   height: 316px;
   overflow-x: scroll;
 } 
-.trending__gifo{
+.gifo{
+  position: relative;
   display: inline-block;
   min-width: 260px;
   height: 200px;
   background-color: red;
   scroll-snap-align: center;
+}
+.gifo__icon--fav{
+  background-image: url('../images/icon-fav.svg');
+}
+.gifo__icon--download{
+  background-image: url('../images/icon-download.svg');
+}
+.gifo__icon--expand{
+  background-image: url('../images/icon-max-normal.svg');
 }
 
 footer{
