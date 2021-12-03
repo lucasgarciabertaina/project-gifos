@@ -68,8 +68,9 @@ body{
     height: 54px;
 }
 .search-section__title{
+    line-height: 1.5;
     font-size: 3.5rem;
-    margin: 50px 275px;
+    margin: 50px calc(50% - 297px);
 }
 .search-section__image{
     width: 399px;
@@ -85,6 +86,12 @@ body{
 }
 .search-section__finder{
     left: calc(50% - 225px);
+}
+.search-section__finder:focus{
+    outline: none;
+}
+.search-section__finder:active{
+    outline: none;
 }
 .search-section__trending-title{
     margin-top: 75px;
@@ -144,17 +151,21 @@ body{
 }
 .gifo:hover{
     background-color: rgba(87,46,229,1);
+    opacity: 0.8;
+}
+.gifo:hover .gifo__icons{
+    display: flex;
 }
 .gifo__icons{
+    display: none;
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 50%;
+    width: calc(50% - 20px);
     height: 55px;
-    display: flex;
     align-items: center;
     justify-items: flex-end;
-  }
+}
 .gifo__icon{
     display: inline-block;
     width: 35px;
@@ -162,16 +173,61 @@ body{
     margin-right: 10px;
     background-repeat: no-repeat;
 }
+
+.gifo__icon--fav{
+    background-image: url('../images/icon-fav.svg');
+}
+.gifo__icon--fav:hover{
+    background-image: url('../images/icon-fav-hover.svg');
+}
+.gifo__icon--fav:active{
+    background-image: url('../images/icon-fav-active.svg');
+}
+
+.gifo__icon--download{
+    background-image: url('../images/icon-download.svg');
+}
+.gifo__icon--download:hover{
+    background-image: url('../images/icon-download-hover.svg');
+}
+
+
+.gifo__icon--expand{
+    background-image: url('../images/icon-max-normal.svg');
+}
+.gifo__icon--expand:hover{
+    background-image: url('../images/icon-max-hover.svg');
+}
+
+
 .gifo__user{
+    display: none;
     position: absolute;
-    bottom: 35px;
+    bottom: 40px;
     left: 15px;
+    font-family: var(--secundary_font);
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 .gifo__title{
+    font-family: var(--secundary_font);
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: none;
     position: absolute;
     bottom: 15px;
     left: 15px;
 }
+.gifo:hover .gifo__title{
+    display: block;
+    color: white;
+}
+
+.gifo:hover .gifo__user{
+    display: block;
+    color: white;
+}
+
 
 footer{
     flex-direction: row;

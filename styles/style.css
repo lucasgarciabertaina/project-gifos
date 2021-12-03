@@ -145,6 +145,7 @@ header {
   left: 294px;
 }
 .search-section__finder{
+  font-family: var(--secundary_font);
   display: inline-block;
   width: 215px;
   height: 22px;
@@ -191,15 +192,7 @@ header {
   background-color: red;
   scroll-snap-align: center;
 }
-.gifo__icon--fav{
-  background-image: url('../images/icon-fav.svg');
-}
-.gifo__icon--download{
-  background-image: url('../images/icon-download.svg');
-}
-.gifo__icon--expand{
-  background-image: url('../images/icon-max-normal.svg');
-}
+
 
 footer{
   height: 196px;
