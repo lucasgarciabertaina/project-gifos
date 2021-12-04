@@ -141,7 +141,7 @@ body{
 .trending__arrow--left:hover{
     background-image: url('../images/button-slider-left-hover.svg');
 }
-.gifo{
+.trending__gifo{
     width: 25%;
     height: 25%;
     min-width: 260px;
@@ -149,11 +149,11 @@ body{
     min-height: 200px;
     max-height: 275px;
 }
-.gifo:hover{
+.trending__gifo:hover{
     background-color: rgba(87,46,229,1);
     opacity: 0.8;
 }
-.gifo:hover .gifo__icons{
+.trending__gifo:hover .gifo__icons{
     display: flex;
 }
 .gifo__icons{
@@ -218,12 +218,12 @@ body{
     bottom: 15px;
     left: 15px;
 }
-.gifo:hover .gifo__title{
+.trending__gifo:hover .gifo__title{
     display: block;
     color: white;
 }
 
-.gifo:hover .gifo__user{
+.trending__gifo:hover .gifo__user{
     display: block;
     color: white;
 }
