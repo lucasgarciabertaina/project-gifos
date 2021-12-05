@@ -115,27 +115,23 @@ body{
     padding-bottom: 15px;
 }
 .trending__container{
-    position: relative;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     height: 350px;
 }
 .trending__arrow{
-    position: absolute;
     width: 40px;
     height: 40px;
 }
 .trending__arrow--right{
-    top: calc(25% - 15px);
-    left: calc(95% - 15px);
+    margin-left: 10px;
     background-image: url('../images/Button-Slider-right.svg')
 }
 .trending__arrow--right:hover{
     background-image: url('../images/Button-Slider-right-hover.svg');
 }
 .trending__arrow--left{
-    top: calc(25% - 15px);
-    right: calc(95% - 15px);
+    margin-right: 10px;
     background-image: url('../images/button-slider-left.svg');
 }
 .trending__arrow--left:hover{
@@ -156,8 +152,34 @@ body{
 .trending__gifo:hover .gifo__icons{
     display: flex;
 }
+.gifo--expand{
+    background-color: white;
+    height: 100vh;
+}
+.gifo--expand__gifo{
+    width: 695px;
+    height: 385px;
+}
+.gifo__icons--expand{
+    top: 555px;
+    right: 535px;
+}
+.gifo__user--expand{
+    top: 555px;
+    left: 550px;
+}
+.gifo__title--expand{
+    top: 585px;
+    left: 550px;
+}
+.header__burger-icon--gifo-extended{
+    position: absolute;
+    top: 65px;
+    right: 280px;
+    display: block;
+    background-image: url('../images/close.svg');
+}
 .gifo__icons{
-    display: none;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -192,10 +214,10 @@ body{
 }
 
 
-.gifo__icon--expand{
+.gifo__icon--expand-expand{
     background-image: url('../images/icon-max-normal.svg');
 }
-.gifo__icon--expand:hover{
+.gifo__icon--expand-expand:hover{
     background-image: url('../images/icon-max-hover.svg');
 }
 

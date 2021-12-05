@@ -224,7 +224,48 @@ header {
   margin-top: 156px;
 }
 
-.gifo__user{
+.gifo__icons--expand{
+  position: absolute;
+  display: flex;
+  top: 400px;
+  right: 0px;
+  height: 55px;
+  align-items: center;
+  justify-items: flex-end;
+  align-items: center;
+  margin-inline-end: 8px;
+}
+
+.gifo__icon--expand{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+.gifo__icon--fav{
+  background-image: url('../images/icon-fav.svg');
+}
+.gifo__icon--fav:hover{
+  background-image: url('../images/icon-fav-hover.svg');
+}
+.gifo__icon--fav:active{
+  background-image: url('../images/icon-fav-active.svg');
+}
+
+.gifo__icon--download{
+  background-image: url('../images/icon-download.svg');
+}
+.gifo__icon--download:hover{
+  background-image: url('../images/icon-download-hover.svg');
+}
+
+.gifo__icon--expand-expand{
+  display: none;
+}
+
+.gifo__user--expand{
   position: absolute;
   top: 415px;
   left: 35px;
@@ -234,7 +275,7 @@ header {
   color: rgba(0, 0, 0, 1);
 }
 
-.gifo__title{
+.gifo__title--expand{
   position: absolute;
   top: 439px;
   left: 35px;
