@@ -262,7 +262,7 @@ footer{
 .header__burger-icon--gifo-extended{
     position: absolute;
     top: 65px;
-    right: 280px;
+    right: calc(50% - 450px);
     display: block;
     background-image: url('../images/close.svg');
 }
@@ -299,16 +299,18 @@ footer{
 
 .gifo__icons--expand{
     top: 555px;
-    right: 535px;
+    right: calc(50% - 375px)
 }
 .gifo__icon--expand-expand{
     background-image: url('../images/icon-max-normal.svg');
 }
+
+
 .gifo__user--expand{
     top: 555px;
-    left: 550px;
+    left: calc(50% - 352px)
 }
 .gifo__title--expand{
     top: 585px;
-    left: 550px;
+    left: calc(50% - 352px)
 }
