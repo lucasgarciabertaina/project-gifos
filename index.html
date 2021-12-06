@@ -15,66 +15,70 @@
 </head>
 <body>
 	<header class="header">
-			<div class="header__container">
-					<img class="logo" src="./images/logo-mobile.svg" alt="logo-gifos">
-			</div>
-			<nav class="header__nav-bar">
-					<input class="header__checkbox" type="checkbox">
-					<span class="header__burger-icon header__burger-icon--gifo-extended"></span>
-					<ul class="header__elements-container">
-							<li class="header__list-element"><a class="header__list-link" href="#">MODO NOCTURNO</a></li>
-							<span class="header__line-of-list-elements"></span>
-							<li class="header__list-element"><a class="header__list-link" href="#">FAVORITOS</a></li>
-							<span class="header__line-of-list-elements"></span>
-							<li class="header__list-element"><a class="header__list-link" href="#">MIS GIFOS</a></li>
-							<a class="header__line-of-list-elements header__add-icon" href="#"></a>
-					</ul>
-			</nav>
+		<div class="header__container">
+			<img class="logo" src="./images/logo-mobile.svg" alt="logo-gifos">
+		</div>
+		<nav class="header__nav-bar">
+			<input class="header__checkbox" type="checkbox">
+			<span class="header__burger-icon header__burger-icon--gifo-extended"></span>
+			<ul class="header__elements-container">
+				<li class="header__list-element"><a class="header__list-link" href="#">MODO NOCTURNO</a></li>
+				<span class="header__line-of-list-elements"></span>
+				<li class="header__list-element"><a class="header__list-link" href="#">FAVORITOS</a></li>
+				<span class="header__line-of-list-elements"></span>
+				<li class="header__list-element"><a class="header__list-link" href="#">MIS GIFOS</a></li>
+				<a class="header__line-of-list-elements header__add-icon" href="#"></a>
+			</ul>
+		</nav>
 	</header>
-	<main>
-			<section class="search-section">
-					<h1 class="search-section__title">Inspírate, busca, guarda, y crea los mejores <span class="search-section__gifos-color">GIFOS</span></h1>
-					<img class="search-section__image" src="./images/ilustra_header.svg" alt="">
-					<div class="search-section__search">
-							<span class="search-section__icon-search"></span>
-							<input class="search-section__finder" type="text" placeholder="Busca GIFOS y más">
-					</div>
-					<h3 class="search-section__trending-title">Trending:</h3>
-					<p class="search-section__trending-paragraph">Reactions, Entertainment, Sports, Stickers, Artists</p>
-			</section>
 
-			<section class="trending">
-					<h2 class="trending__title">Trending GIFOS</h2>
-					<p class="trending__paragraph trending__paragraph--top">Mira los últimos</p>
-					<p class="trending__paragraph trending__paragraph--bottom">GIFOS de nuestra comunidad.</p>
-					<section class="trending__container">
-							<span class="trending__arrow trending__arrow--left"></span>
-							<div class="gifo--expand">
-									<div class="gifo--expand__gifo"></div>
-									<div class="gifo__icons--expand">
-											<span class="gifo__icon--expand gifo__icon--fav "></span>
-											<span class="gifo__icon--expand gifo__icon--download"></span>
-											<span class="gifo__icon--expand gifo__icon--expand-expand"></span>
-									</div>
-									<p class="gifo__user--expand">User</p>
-									<h4 class="gifo__title--expand">Title of GIFO</h4>
-							</div>
-							<div class="trending__gifo"></div>
-							<div class="trending__gifo"></div>
-							<span class="trending__arrow trending__arrow--right"></span>
-					</section>
-			</section>
-	</main>
-	<footer>
-			<div class="footer__desktop-divisor">
-					<p class="footer__paragraph">Compartir en:</p>
-					<div class="footer__icons-container">
-							<a href=""><span class="footer__icon footer__facebook"></span></a>
-							<a href=""><span class="footer__icon footer__twitter"></span></a>
-							<a href=""><span class="footer__icon footer__instagram"></span></a>
-					</div>
+	<main>
+		<section class="search-section">
+			<h1 class="search-section__title">Inspírate, busca, guarda, y crea los mejores <span class="search-section__gifos-color">GIFOS</span></h1>
+			<img class="search-section__image" src="./images/ilustra_header.svg" alt="">
+			<div class="search-section__search">
+				<span class="search-section__icon-search"></span>
+				<input class="search-section__finder" type="text" placeholder="Busca GIFOS y más">
 			</div>
-			<p class="footer__rights">© GIFOS 2020 All Rights Reserved.</p>
+			<h3 class="search-section__trending-title">Trending:</h3>
+			<p class="search-section__trending-paragraph">Reactions, Entertainment, Sports, Stickers, Artists</p>
+		</section>
+
+		<section class="trending">
+			<h2 class="trending__title">Trending GIFOS</h2>
+			<p class="trending__paragraph trending__paragraph--top">Mira los últimos</p>
+			<p class="trending__paragraph trending__paragraph--bottom">GIFOS de nuestra comunidad.</p>
+			<section class="trending__container">
+				<span class="trending__arrow trending__arrow--left"></span>
+				<div class="gifo--expand">
+					<span class="arrow__left--expand"></span>
+					<div class="gifo--expand__gifo"></div>
+					<div class="gifo__icons--expand">
+						<span class="gifo__icon--expand gifo__icon--fav "></span>
+						<span class="gifo__icon--expand gifo__icon--download"></span>
+						<span class="gifo__icon--expand gifo__icon--max-expand"></span>
+					</div>
+					<p class="gifo__user--expand">User</p>
+					<h4 class="gifo__title--expand">Title of GIFO</h4>
+					<span class="arrow__right--expand"></span>
+				</div>
+				<div class="trending__gifo"></div>
+				<div class="trending__gifo"></div>
+				<span class="trending__arrow trending__arrow--right"></span>
+			</section>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer__desktop-divisor">
+			<p class="footer__paragraph">Compartir en:</p>
+			<div class="footer__icons-container">
+				<a href=""><span class="footer__icon footer__facebook"></span></a>
+				<a href=""><span class="footer__icon footer__twitter"></span></a>
+				<a href=""><span class="footer__icon footer__instagram"></span></a>
+			</div>
+		</div>
+		<p class="footer__rights">© GIFOS 2020 All Rights Reserved.</p>
 	</footer>
 </body>
 </html>
