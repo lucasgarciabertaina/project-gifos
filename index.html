@@ -13,14 +13,14 @@
 	<link rel="stylesheet" href="/styles/style.css" media="screen and (min-width: 375px)">
 	<link rel="stylesheet" href="/styles/desktop.css" media="screen and (min-width: 1200px)">
 </head>
-<body>
+<body id="index">
 	<header class="header">
 		<div class="header__container">
 			<img class="logo" src="./images/logo-mobile.svg" alt="logo-gifos">
 		</div>
 		<nav class="header__nav-bar">
 			<input class="header__checkbox" type="checkbox">
-			<span class="header__burger-icon header__burger-icon--gifo-extended"></span>
+			<span class="header__burger-icon"></span>
 			<ul class="header__elements-container">
 				<li class="header__list-element"><a class="header__list-link" href="#">MODO NOCTURNO</a></li>
 				<span class="header__line-of-list-elements"></span>
@@ -44,25 +44,24 @@
 			<p class="search-section__trending-paragraph">Reactions, Entertainment, Sports, Stickers, Artists</p>
 		</section>
 
-		<section class="trending">
+		<section class="trending" id="section__trending">
 			<h2 class="trending__title">Trending GIFOS</h2>
 			<p class="trending__paragraph trending__paragraph--top">Mira los últimos</p>
 			<p class="trending__paragraph trending__paragraph--bottom">GIFOS de nuestra comunidad.</p>
 			<section class="trending__container">
 				<span class="trending__arrow trending__arrow--left"></span>
-				<div class="gifo--expand">
-					<span class="arrow__left--expand"></span>
-					<div class="gifo--expand__gifo"></div>
-					<div class="gifo__icons--expand">
-						<span class="gifo__icon--expand gifo__icon--fav "></span>
-						<span class="gifo__icon--expand gifo__icon--download"></span>
-						<span class="gifo__icon--expand gifo__icon--max-expand"></span>
-					</div>
-					<p class="gifo__user--expand">User</p>
-					<h4 class="gifo__title--expand">Title of GIFO</h4>
-					<span class="arrow__right--expand"></span>
-				</div>
 				<div class="trending__gifo"></div>
+				<div class="trending__gifo">
+					<div class="gifo">
+						<div class="gifo__icons">
+							<span class="gifo__icon gifo__icon--fav "></span>
+							<span class="gifo__icon gifo__icon--download"></span>
+							<span class="gifo__icon gifo__icon--max"></span>
+						</div>
+						<p class="gifo__user">User</p>
+						<h4 class="gifo__title">Title of GIFO</h4>
+					</div>
+				</div>
 				<div class="trending__gifo"></div>
 				<span class="trending__arrow trending__arrow--right"></span>
 			</section>
@@ -80,5 +79,6 @@
 		</div>
 		<p class="footer__rights">© GIFOS 2020 All Rights Reserved.</p>
 	</footer>
+	<script src="./apps/app.js" type="module"></script>
 </body>
 </html>

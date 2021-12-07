@@ -256,6 +256,12 @@ footer{
   flex-direction: column;
   align-items: center;
 }
+.search-section__finder:focus{
+  outline: none;
+}
+.search-section__finder:active{
+  outline: none;
+}
 .gifo__icon--download:hover{
   background-image: url('../images/icon-download-hover.svg');
 }
@@ -264,6 +270,17 @@ footer{
 }
 .gifo__icon--fav:active{
   background-image: url('../images/icon-fav-active.svg');
+}
+
+/* Gifo */
+.gifo__user{
+  display: none;
+}
+.gifo__title{
+  display: none;
+}
+.gifo__icons{
+  display: none;
 }
 
 
