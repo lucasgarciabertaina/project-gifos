@@ -1,11 +1,11 @@
 import darkMode from './darkMode.js';
+import setHtml from './trending/setHtml.js';
 
 export function page(htmlPage) {
   switch (htmlPage) {
     case index:
-      console.log('hi')
-      darkMode('index')
-      console.log(document.getElementsByClassName('trending'))
+      darkMode('index');
+      setHtml();
       //eventListeners de search
       break;
 
