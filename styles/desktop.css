@@ -160,11 +160,9 @@ footer{
 }
 
 /* Pseudo-Classes */
-.trending__gifo:hover .gifo{
-    z-index: -1;
-}
 .trending__gifo:hover .gifo__hover-container {
-    background-color: rgba(87,46,229,0.5);
+    background-color: rgba(87,46,229,1);
+    opacity: 0.6;
 }
 .header__add-icon:hover{
     background-image: url('../images/CTA-crear-gifo-hover.svg');

@@ -1,11 +1,11 @@
 import darkMode from './darkMode.js';
-import setHtml from './trending/setHtml.js';
+import setTrendingGifos from './trending/setTrendingGifos.js';
 
 export function page(htmlPage) {
   switch (htmlPage) {
     case index:
       darkMode('index');
-      setHtml();
+      setTrendingGifos();
       //eventListeners de search
       break;
 
