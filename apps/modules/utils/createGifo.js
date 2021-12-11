@@ -21,9 +21,9 @@ export default function createGifo(gifos, trendingContainer) {
     favTag.setAttribute("class", "gifo__icon gifo__icon--fav");
     iconsTag.appendChild(favTag);
 
-    const downlTag = document.createElement("span");
-    downlTag.setAttribute("class", "gifo__icon gifo__icon--download");
-    iconsTag.appendChild(downlTag);
+    const downTag = document.createElement("span");
+    downTag.setAttribute("class", "gifo__icon gifo__icon--download");
+    iconsTag.appendChild(downTag);
 
     const maxTag = document.createElement("span");
     maxTag.setAttribute("class", "gifo__icon gifo__icon--max");

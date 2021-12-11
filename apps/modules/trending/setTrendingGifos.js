@@ -1,13 +1,12 @@
 import getTrendingApi from "./get.js";
 import setGifos from './setGifos.js'
 import createGifo from '../utils/createGifo.js'
-const APIKEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
-
-
+import mobileScrollGifos from './mobileScrollGifos.js'
+const API_KEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
 
 export default async function setHtml() {
-  const trendingGifos = await getTrendingApi(APIKEY);
-  const gifos = setGifos(trendingGifos);
+  const trendingGifos = await getTrendingApi(API_KEY);
+  let gifos = setGifos(trendingGifos, 0);
   const trending = document.getElementById("trending-container");
   const arrowLeft = document.createElement('span');
   arrowLeft.setAttribute("class", "trending__arrow trending__arrow--left");
@@ -16,13 +15,22 @@ export default async function setHtml() {
   const arrowRight = document.createElement('span');
   arrowRight.setAttribute("class", "trending__arrow trending__arrow--right");
   trending.appendChild(arrowRight);
-  let position = 0
+
+  let initialPosition = 0;
+  let initialCondition = 10000;
+  let initialGiFosAdd = 3;
   trending.addEventListener("scroll", () => {
-    const trendingPosition = trending.getBoundingClientRect();
-    console.log(trending.style.width)
-    position += trendingPosition.right;
-    if (position === trending.style.width / 2) {
-      console.log('ahora')
-    }
+    const scrollFunction = mobileScrollGifos(initialPosition, initialCondition, initialGiFosAdd);
+    initialPosition = scrollFunction.position;
+    initialCondition = scrollFunction.condition;
+    initialGiFosAdd = scrollFunction.gifosAdd;
+    console.log({ initialPosition, initialCondition, initialGiFosAdd })
   })
+
+  // arrowLeft.addEventListener("click", () => {
+
+  // })
+  // arrowRight.addEventListener("click", () => {
+
+  // })
 }
