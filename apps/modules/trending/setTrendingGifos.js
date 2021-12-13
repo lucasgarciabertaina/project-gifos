@@ -2,35 +2,35 @@ import getTrendingApi from "./get.js";
 import setGifos from './setGifos.js'
 import createGifo from '../utils/createGifo.js'
 import mobileScrollGifos from './mobileScrollGifos.js'
+import desktopNewGifos from "./desktopNewGifos.js";
 const API_KEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
 
 export default async function setHtml() {
   const trendingGifos = await getTrendingApi(API_KEY);
   let gifos = setGifos(trendingGifos, 0);
-  const trending = document.getElementById("trending-container");
-  const arrowLeft = document.createElement('span');
-  arrowLeft.setAttribute("class", "trending__arrow trending__arrow--left");
-  trending.appendChild(arrowLeft);
-  createGifo(gifos, trending);
-  const arrowRight = document.createElement('span');
-  arrowRight.setAttribute("class", "trending__arrow trending__arrow--right");
-  trending.appendChild(arrowRight);
+  const gifosContainer = document.getElementById("trending-gifos");
+  createGifo(gifos, gifosContainer);
 
-  let initialPosition = 0;
-  let initialCondition = 10000;
-  let initialGiFosAdd = 3;
-  trending.addEventListener("scroll", () => {
-    const scrollFunction = mobileScrollGifos(initialPosition, initialCondition, initialGiFosAdd);
-    initialPosition = scrollFunction.position;
-    initialCondition = scrollFunction.condition;
-    initialGiFosAdd = scrollFunction.gifosAdd;
-    console.log({ initialPosition, initialCondition, initialGiFosAdd })
+  let position = 0;
+  let condition = 10000;
+  let gifosAdd = 3;
+  gifosContainer.addEventListener("scroll", () => {
+    const scrollFunction = mobileScrollGifos(position, condition, gifosAdd, trendingGifos);
+    position = scrollFunction.position;
+    condition = scrollFunction.condition;
+    gifosAdd = scrollFunction.gifosAdd;
   })
 
-  // arrowLeft.addEventListener("click", () => {
+  const arrowLeft = document.getElementById("arrow-left");
 
-  // })
-  // arrowRight.addEventListener("click", () => {
+  gifosAdd = 3;
+  arrowLeft.addEventListener("click", () => {
+    desktopNewGifos(gifosAdd, gifosContainer);
+  })
 
-  // })
+  const arrowRight = document.getElementById("arrow-right");
+
+  arrowRight.addEventListener("click", () => {
+    desktopNewGifos(gifosAdd, gifosContainer);
+  })
 }

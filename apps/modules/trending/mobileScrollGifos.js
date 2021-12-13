@@ -1,15 +1,15 @@
 import setGifos from './setGifos.js';
-import createGifo from './createGifo.js';
+import createGifo from '../utils/createGifo.js';
 
-export default function mobileScrollGifos(position, condition, gifosAdd) {
-  const trending = document.getElementById("trending-container");
+export default function mobileScrollGifos(position, condition, gifosAdd, trendingGifos) {
+  const gifosContainer = document.getElementById("trending-gifos");
   const trendingPosition = trending.getBoundingClientRect();
   position += trendingPosition.right;
   if (position >= condition) {
     gifosAdd += 3;
     condition += condition * 2;
-    gifos = setGifos(trendingGifos, gifosAdd);
-    createGifo(gifos, trending);
+    const gifos = setGifos(trendingGifos, gifosAdd);
+    createGifo(gifos, gifosContainer);
   }
   return { position, condition, gifosAdd }
 }

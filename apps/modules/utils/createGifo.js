@@ -1,17 +1,17 @@
-export default function createGifo(gifos, trendingContainer) {
+export default function createGifo(gifos, gifosContainer) {
   for (const gifo of gifos) {
-    const container = document.createElement("div");
-    container.setAttribute("class", "trending__gifo");
+    const gifoContainer = document.createElement("div");
+    gifoContainer.setAttribute("class", "trending__gifo");
 
     const gifoTag = document.createElement("img");
     const { url } = gifo;
     gifoTag.setAttribute("src", url);
     gifoTag.setAttribute("class", "gifo");
-    container.appendChild(gifoTag);
+    gifoContainer.appendChild(gifoTag);
 
     const gifoHoverContainer = document.createElement("div");
     gifoHoverContainer.setAttribute("class", "gifo__hover-container");
-    container.appendChild(gifoHoverContainer);
+    gifoContainer.appendChild(gifoHoverContainer);
 
     const iconsTag = document.createElement("div");
     iconsTag.setAttribute("class", "gifo__icons");
@@ -40,8 +40,6 @@ export default function createGifo(gifos, trendingContainer) {
     titleTag.innerText = title;
     titleTag.setAttribute("class", "gifo__title");
     gifoHoverContainer.appendChild(titleTag);
-
-
-    trendingContainer.appendChild(container);
+    gifosContainer.appendChild(gifoContainer);
   }
 }
