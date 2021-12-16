@@ -1,7 +1,12 @@
 export default (page) => {
+  let body;
   switch (page) {
     case 'index':
-      // Replant how to do this thing
+      body = document.getElementById("index")
+      const call = document.getElementById("mode");
+      body.setAttribute("class", "dark");
+      call.addEventListener(("click"), () => {
+      });
       break;
 
     default:

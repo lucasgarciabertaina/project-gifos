@@ -4,13 +4,11 @@ import search from "../modules/search/search.js"
 export function page(htmlPage) {
   switch (htmlPage) {
     case index:
+      search();
       darkMode('index');
       setTrendingGifos();
-      search();
       //eventListeners de search
       break;
 
-    default:
-      break;
   }
 }
