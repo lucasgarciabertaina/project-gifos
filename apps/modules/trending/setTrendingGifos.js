@@ -23,14 +23,16 @@ export default async function setHtml() {
 
   const arrowLeft = document.getElementById("arrow-left");
 
-  gifosAdd = 3;
+  gifosAdd = 0;
   arrowLeft.addEventListener("click", () => {
-    desktopNewGifos(gifosAdd, gifosContainer);
+    gifosAdd = gifosAdd - 3;
+    desktopNewGifos(gifosAdd, trendingGifos);
   })
 
   const arrowRight = document.getElementById("arrow-right");
-
+  gifosAdd = 0;
   arrowRight.addEventListener("click", () => {
-    desktopNewGifos(gifosAdd, gifosContainer);
+    gifosAdd = gifosAdd + 3;
+    desktopNewGifos(gifosAdd, trendingGifos);
   })
 }

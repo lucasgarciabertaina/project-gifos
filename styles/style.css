@@ -176,11 +176,14 @@ header {
 .trending__container{
   display: flex;
   align-items: center;
-  gap: 20px;
   height: 316px;
-  overflow-x: scroll;
 }
-/* Gifo Trending */ 
+/* Gifo Trending */
+.trending__gifos {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+} 
 .trending__gifo{
   position: relative;
   display: inline-block;

@@ -3,8 +3,8 @@ import createGifo from '../utils/createGifo.js';
 
 export default function mobileScrollGifos(position, condition, gifosAdd, trendingGifos) {
   const gifosContainer = document.getElementById("trending-gifos");
-  const trendingPosition = trending.getBoundingClientRect();
-  position += trendingPosition.right;
+  const gifosPosition = gifosContainer.getBoundingClientRect();
+  position += gifosPosition.right;
   if (position >= condition) {
     gifosAdd += 3;
     condition += condition * 2;
