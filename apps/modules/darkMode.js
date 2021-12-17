@@ -1,11 +1,13 @@
+import darkDay from "./utils/darkDay.js"
+import isDark from "./utils/isDark.js";
+
 export default (page) => {
-  let body;
+  const mode = document.getElementById("mode");
   switch (page) {
     case 'index':
-      body = document.getElementById("index")
-      const call = document.getElementById("mode");
-      body.setAttribute("class", "dark");
-      call.addEventListener(("click"), () => {
+      darkDay(!isDark());
+      mode.addEventListener(("click"), () => {
+        darkDay(isDark());
       });
       break;
 
