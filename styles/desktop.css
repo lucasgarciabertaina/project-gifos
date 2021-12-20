@@ -34,6 +34,7 @@
   margin-left: 25px;
   width: 54px;
   height: 54px;
+  cursor: pointer;
 }
 .header__line-of-list-elements {
   display: none;
@@ -46,6 +47,7 @@
   background-repeat: no-repeat;
   margin-bottom: 25px;
   margin-left: 40px;
+  opacity: 1;
 }
 
 /* Main */
@@ -113,6 +115,9 @@
 .trending__arrow--right {
   margin-left: 10px;
   background-image: url("../images/Button-Slider-right.svg");
+}
+.trending__gifos {
+  overflow-x: auto;
 }
 
 /* Gifo Trending */
@@ -214,10 +219,41 @@ footer {
 .arrow__right--expand:hover {
   background-image: url("../images/Button-Slider-right-hover.svg");
 }
+.dark
+  header
+  .header__nav-bar
+  .header__elements-container
+  .header__add-icon:hover {
+  background-image: url("../images/CTA-crear-gifo-hover-modo-noc.svg");
+}
+.dark main .trending .trending__container .trending__arrow--left:hover {
+  background-image: url("../images/button-slider-left-md-noct-hover.png");
+}
+.dark main .trending .trending__container .trending__arrow--right:hover {
+  background-image: url("../images/button-slider-right-md-noct-hover.png");
+}
 
 /* Dark Mode */
-/* TODO DARK MODE IN DESKTOP */
-/* SEE THE ERROR IN TRENDING GIFOS */ 
+.dark
+  header
+  .header__nav-bar
+  .header__elements-container
+  .header__list-element
+  .header__list-link {
+  color: white;
+}
+.dark header .header__nav-bar .header__elements-container .header__add-icon {
+  background-image: url("../images/CTA-crear-gifo-modo-noc.svg");
+  background-color: inherit;
+  opacity: 1;
+}
+.dark main .trending .trending__container .trending__arrow--left {
+  background-image: url("../images/button-slider-left-md-noct.svg");
+}
+.dark main .trending .trending__container .trending__arrow--right {
+  background-image: url("../images/button-slider-right-md-noct.svg");
+}
+/* SEE THE ERROR IN TRENDING GIFOS */
 
 /* Gifo */
 .gifo__hover-container {
