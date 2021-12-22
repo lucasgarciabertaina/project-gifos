@@ -233,6 +233,15 @@ footer {
   background-image: url("../images/button-slider-right-md-noct-hover.png");
 }
 
+/* Searcher Active */
+
+.search-section__search--active {
+  width: 551px;
+}
+.search-section__icon-search--active {
+  right: 510px;
+}
+
 /* Dark Mode */
 .dark
   header
@@ -253,7 +262,6 @@ footer {
 .dark main .trending .trending__container .trending__arrow--right {
   background-image: url("../images/button-slider-right-md-noct.svg");
 }
-/* SEE THE ERROR IN TRENDING GIFOS */
 
 /* Gifo */
 .gifo__hover-container {
