@@ -282,6 +282,14 @@ footer {
   opacity: 1;
 }
 
+/* Search Active */
+.search {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
 /* Dark mode */
 .dark {
   background-color: rgba(55, 56, 60, 1);
