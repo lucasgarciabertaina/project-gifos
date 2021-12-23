@@ -382,12 +382,19 @@ footer {
 .dark main .search-section .search-section__search {
   border-color: var(--dark_mode);
 }
+.dark main .search-section .search-section__search--active {
+  border-color: var(--dark_mode);
+}
 
 .dark main .search-section .search-section__finder {
   background-color: rgba(55, 56, 60, 1);
+  color: var(--dark_mode);
 }
 .dark main .search-section .search-section__icon-search {
   background-image: url(../images/icon-search-mod-noc.svg);
+}
+.dark main .search-section .search-section__icon-close--active {
+  background-image: url(../images/close-modo-noct.svg);
 }
 
 .dark main .trending {

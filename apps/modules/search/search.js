@@ -1,18 +1,6 @@
-import search from './get.js';
-import setOptions from './setOptions.js';
-const API_KEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
-
-
-export default async () => {
-  const searcher = document.getElementById("searcher");
-
-  searcher.addEventListener("keydown", async (letter) => {
-    const value = searcher.value + letter.key;
-    if (value.length > 1) {
-      const searchValues = await search(API_KEY, value);
-      const gifosTitles = searchValues.map(item => item.title);
-      setOptions(gifosTitles);
-    }
-  })
+export default async function (apiKey, text) {
+  const request = await fetch(`https://api.giphy.com/v1/gifs/search?q=${text}&api_key=${apiKey}&limit=20`);
+  const { data } = await request.json();
+  console.log(data);
+  return data
 }
-
