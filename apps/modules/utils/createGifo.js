@@ -1,7 +1,10 @@
-export default function createGifo(gifos, gifosContainer) {
+import expand from "../gifo/expand.js"
+
+export default function createGifo(gifos, gifosContainer, containerClass) {
+  console.log(window.getBoundingClientRect);
   for (const gifo of gifos) {
     const gifoContainer = document.createElement("div");
-    gifoContainer.setAttribute("class", "trending__gifo");
+    gifoContainer.setAttribute("class", containerClass);
 
     const gifoTag = document.createElement("img");
     const { url } = gifo;
@@ -41,5 +44,19 @@ export default function createGifo(gifos, gifosContainer) {
     titleTag.setAttribute("class", "gifo__title");
     gifoHoverContainer.appendChild(titleTag);
     gifosContainer.appendChild(gifoContainer);
+
+    const gifoData = {
+      container: gifoContainer,
+      gifo: gifoTag,
+      gifoIcons: iconsTag,
+      iconFav: favTag,
+      iconDownload: downTag,
+      iconMax: maxTag,
+      user: userTag,
+      title: titleTag,
+    }
+
+    maxTag.addEventListener(("click"), () => expand(gifoData))
+    gifoContainer.addEventListener(("touch"), () => expand(gifoData));
   }
 }
