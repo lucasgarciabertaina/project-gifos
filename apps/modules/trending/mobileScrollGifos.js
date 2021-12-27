@@ -9,7 +9,7 @@ export default function mobileScrollGifos(position, condition, gifosAdd, trendin
     gifosAdd += 3;
     condition += condition * 2;
     const gifos = setGifos(trendingGifos, gifosAdd);
-    createGifo(gifos, gifosContainer);
+    createGifo(gifos, gifosContainer, "trending__gifo");
   }
   return { position, condition, gifosAdd }
 }

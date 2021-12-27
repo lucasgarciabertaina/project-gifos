@@ -436,7 +436,11 @@ footer {
 
 .header__burger-icon--gifo-expand {
   z-index: 2;
+  display: block;
+  width: 15px;
+  height: 15px;
   background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
 }
 
 .gifo--expand {
@@ -484,6 +488,9 @@ footer {
 }
 .gifo__icon--max-expand {
   display: none;
+}
+.gifo__icon--max {
+  background-image: url("../images/icon-max.svg");
 }
 .gifo__user--expand {
   position: absolute;

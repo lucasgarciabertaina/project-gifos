@@ -262,6 +262,19 @@ footer {
 .dark main .trending .trending__container .trending__arrow--right {
   background-image: url("../images/button-slider-right-md-noct.svg");
 }
+.dark main .trending .trending__container .gifo--expand {
+  background-color: rgba(55, 56, 60, 1);
+  height: 100vh;
+}
+.dark main .trending .trending__container .gifo__user--expand {
+  color: white;
+}
+.dark main .trending .trending__container .gifo__title--expand {
+  color: white;
+}
+.dark header .header__burger-icon--gifo-expand {
+  background-image: url("../images/close-modo-noct.svg");
+}
 
 /* Gifo */
 .gifo__hover-container {
@@ -344,6 +357,7 @@ footer {
 .gifo--expand__gifo {
   width: 695px;
   height: 385px;
+  margin-top: calc(10% - 15px);
 }
 
 /* Gifo__Icons--Expand */
@@ -367,4 +381,10 @@ footer {
 .arrow__right--expand {
   right: calc(50% - 500px);
   background-image: url("../images/Button-Slider-right.svg");
+}
+.header__burger-icon--gifo-expand {
+  display: block;
+  position: absolute;
+  top: calc(10% - 15px);
+  right: calc(10% - 15px);
 }

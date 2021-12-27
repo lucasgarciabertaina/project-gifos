@@ -1,6 +1,8 @@
-import expand from "../gifo/expand.js"
+import expand from "../gifo/expand.js";
+import download from "../gifo/download.js"
+import isDesktop from "./isDesktop.js";
 
-export default function createGifo(gifos, gifosContainer, containerClass) {
+export default async function createGifo(gifos, gifosContainer, containerClass) {
   console.log(window.getBoundingClientRect);
   for (const gifo of gifos) {
     const gifoContainer = document.createElement("div");
@@ -24,9 +26,16 @@ export default function createGifo(gifos, gifosContainer, containerClass) {
     favTag.setAttribute("class", "gifo__icon gifo__icon--fav");
     iconsTag.appendChild(favTag);
 
-    const downTag = document.createElement("span");
+    const downTag = document.createElement("a");
     downTag.setAttribute("class", "gifo__icon gifo__icon--download");
+    downTag.setAttribute("download", "gifo.gif");
+
+    const response = await fetch(url + ".gif");
+    const file = await response.blob();
+    const downloadUrl = window.URL.createObjectURL(file);
+    downTag.setAttribute("href", downloadUrl);
     iconsTag.appendChild(downTag);
+
 
     const maxTag = document.createElement("span");
     maxTag.setAttribute("class", "gifo__icon gifo__icon--max");
@@ -54,9 +63,15 @@ export default function createGifo(gifos, gifosContainer, containerClass) {
       iconMax: maxTag,
       user: userTag,
       title: titleTag,
+      trendingPosition: gifosContainer.getBoundingClientRect(),
     }
+    downTag.addEventListener(("click"), () => download());
+    maxTag.addEventListener(("click"), () => expand(gifoData));
 
-    maxTag.addEventListener(("click"), () => expand(gifoData))
-    gifoContainer.addEventListener(("touch"), () => expand(gifoData));
+    gifoContainer.addEventListener(("click"), () => {
+      if (!isDesktop()) {
+        expand(gifoData)
+      }
+    });
   }
 }
