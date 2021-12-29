@@ -1,9 +1,7 @@
 import expand from "../gifo/expand.js";
-import download from "../gifo/download.js"
 import isDesktop from "./isDesktop.js";
 
 export default async function createGifo(gifos, gifosContainer, containerClass) {
-  console.log(window.getBoundingClientRect);
   for (const gifo of gifos) {
     const gifoContainer = document.createElement("div");
     gifoContainer.setAttribute("class", containerClass);
@@ -65,7 +63,6 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
       title: titleTag,
       trendingPosition: gifosContainer.getBoundingClientRect(),
     }
-    downTag.addEventListener(("click"), () => download());
     maxTag.addEventListener(("click"), () => expand(gifoData));
 
     gifoContainer.addEventListener(("click"), () => {

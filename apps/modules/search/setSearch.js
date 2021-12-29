@@ -1,7 +1,7 @@
 import getSuggestions from './getSuggestions.js';
 import setOptions from './setOptions.js';
 import destroyOptions from './destroyOptions.js';
-import search from './search.js';
+import setSearchIntoDom from './setSearchIntoDom.js';
 const API_KEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
 
 
@@ -20,7 +20,7 @@ export default async () => {
       const option0 = document.getElementById("option0");
       option0.addEventListener("click", () => {
         searcher.value = gifoSuggestion0.innerHTML;
-        search(API_KEY, searcher.value);
+        setSearchIntoDom({ value: searcher.value });
         destroyOptions();
       })
 
@@ -28,7 +28,7 @@ export default async () => {
       const option1 = document.getElementById("option1");
       option1.addEventListener("click", () => {
         searcher.value = gifoSuggestion1.innerHTML;
-        search(API_KEY, searcher.value);
+        setSearchIntoDom({ value: searcher.value });
         destroyOptions();
       })
 
@@ -36,7 +36,7 @@ export default async () => {
       const option2 = document.getElementById("option2");
       option2.addEventListener("click", () => {
         searcher.value = gifoSuggestion2.innerHTML;
-        search(API_KEY, searcher.value);
+        setSearchIntoDom({ value: searcher.value });
         destroyOptions();
       })
 
@@ -44,7 +44,7 @@ export default async () => {
       const option3 = document.getElementById("option3");
       option3.addEventListener("click", () => {
         searcher.value = gifoSuggestion3.innerHTML;
-        search(API_KEY, searcher.value);
+        setSearchIntoDom({ value: searcher.value });
         destroyOptions();
       })
 
@@ -56,7 +56,7 @@ export default async () => {
 
       const iconSearch = document.getElementById("icon-search");
       iconSearch.addEventListener(("click"), () => {
-        search(API_KEY, searcher.value);
+        setSearchIntoDom({ value: searcher.value });
       })
     }
   })

@@ -25,16 +25,12 @@ export default function expandGifo(gifoData) {
 
   burgerIcon.addEventListener(("click"), () => {
     const body = document.getElementsByTagName("body")[0];
+    body.removeAttribute("class");
     if (isDark()) {
-      console.log("hola");
-      body.setAttribute("class", "dark")
-    } else {
-      console.log("chau");
-      body.removeAttribute("class")
+      body.setAttribute("class", "dark");
     }
     checkbox.disabled = false;
     window.scrollTo(0, gifoData.trendingPosition.y);
-    body.removeAttribute("class");
     burgerIcon.setAttribute("class", "header__burger-icon");
 
     gifoData.container.setAttribute("class", containerClass);
