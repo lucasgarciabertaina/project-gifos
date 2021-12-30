@@ -18,34 +18,30 @@ export default async () => {
 
       const gifoSuggestion0 = document.getElementById("suggestion0");
       const option0 = document.getElementById("option0");
-      option0.addEventListener("click", () => {
+      option0.addEventListener("click", async () => {
         searcher.value = gifoSuggestion0.innerHTML;
-        setSearchIntoDom({ value: searcher.value });
-        destroyOptions();
+        await setSearchIntoDom({ value: searcher.value });
       })
 
       const gifoSuggestion1 = document.getElementById("suggestion1");
       const option1 = document.getElementById("option1");
-      option1.addEventListener("click", () => {
+      option1.addEventListener("click", async () => {
         searcher.value = gifoSuggestion1.innerHTML;
-        setSearchIntoDom({ value: searcher.value });
-        destroyOptions();
+        await setSearchIntoDom({ value: searcher.value });
       })
 
       const gifoSuggestion2 = document.getElementById("suggestion2");
       const option2 = document.getElementById("option2");
-      option2.addEventListener("click", () => {
+      option2.addEventListener("click", async () => {
         searcher.value = gifoSuggestion2.innerHTML;
-        setSearchIntoDom({ value: searcher.value });
-        destroyOptions();
+        await setSearchIntoDom({ value: searcher.value });
       })
 
       const gifoSuggestion3 = document.getElementById("suggestion3");
       const option3 = document.getElementById("option3");
-      option3.addEventListener("click", () => {
+      option3.addEventListener("click", async () => {
         searcher.value = gifoSuggestion3.innerHTML;
-        setSearchIntoDom({ value: searcher.value });
-        destroyOptions();
+        await setSearchIntoDom({ value: searcher.value });
       })
 
       const iconClose = document.getElementById("icon-close");
@@ -55,8 +51,8 @@ export default async () => {
       })
 
       const iconSearch = document.getElementById("icon-search");
-      iconSearch.addEventListener(("click"), () => {
-        setSearchIntoDom({ value: searcher.value });
+      iconSearch.addEventListener(("click"), async () => {
+        await setSearchIntoDom({ value: searcher.value });
       })
     }
   })
