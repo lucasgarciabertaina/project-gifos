@@ -169,6 +169,11 @@ footer {
   background-color: rgba(87, 46, 229, 1);
   opacity: 0.6;
 }
+.gifo-container:hover .gifo__hover-container {
+  position: absolute;
+  background-color: rgba(87, 46, 229, 1);
+  opacity: 0.6;
+}
 .header__add-icon:hover {
   background-image: url("../images/CTA-crear-gifo-hover.svg");
 }
@@ -192,6 +197,17 @@ footer {
   color: white;
 }
 .trending__gifo:hover .gifo__user {
+  display: block;
+  color: white;
+}
+.gifo-container:hover .gifo__icons {
+  display: flex;
+}
+.gifo-container:hover .gifo__title {
+  display: block;
+  color: white;
+}
+.gifo-container:hover .gifo__user {
   display: block;
   color: white;
 }
@@ -242,6 +258,31 @@ footer {
   right: 510px;
 }
 
+/* Find Element */
+
+.find {
+  padding-top: 5%;
+}
+.find__line{
+  width: 30%;
+}
+.find__title{ 
+  padding-top: 5%;
+}
+.gifos {
+  padding-top: 5%;
+  gap: 30px;
+}
+.gifo-container {
+  width: 260px;
+  height: 200px;
+}
+.find__see-more {
+  margin: 5% auto;
+  padding: 15px 35px;
+  border-radius: 35px;
+}
+
 /* Dark Mode */
 .dark
   header
@@ -262,7 +303,6 @@ footer {
 .dark main .trending .trending__container .trending__arrow--right {
   background-image: url("../images/button-slider-right-md-noct.svg");
 }
-
 
 /* Gifo */
 .gifo__hover-container {

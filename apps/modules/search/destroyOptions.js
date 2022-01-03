@@ -27,4 +27,17 @@ export default function destroyOption() {
   searcherContainer.removeChild(option2);
   const option3 = document.getElementById("option3");
   searcherContainer.removeChild(option3);
+
+  const find = document.getElementById("find");
+  const findLine = document.getElementById("find-line");
+
+  const trendingTitle = document.createElement("h3");
+  trendingTitle.innerHTML = "Trending:";
+  trendingTitle.setAttribute("class", "search-section__trending-title");
+
+  const trendingParagraph = document.createElement("p");
+  trendingParagraph.innerHTML = "Reactions, Entertainment, Sports, Stickers, Artists";
+  trendingParagraph.setAttribute("class", "search-section__trending-paragraph");
+  find.insertBefore(trendingParagraph, findLine);
+  find.insertBefore(trendingTitle, trendingParagraph);
 }
