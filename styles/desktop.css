@@ -260,13 +260,10 @@ footer {
 
 /* Find Element */
 
-.find {
-  padding-top: 5%;
-}
-.find__line{
+.find__line {
   width: 30%;
 }
-.find__title{ 
+.find__title {
   padding-top: 5%;
 }
 .gifos {

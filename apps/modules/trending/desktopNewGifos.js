@@ -1,5 +1,5 @@
 import setGifos from './setGifos.js';
-import createGifo from '../utils/createGifo.js';
+import createGifo from '../gifo/createGifo.js';
 
 export default function (gifosAdd, trendingGifos) {
   const gifosContainer = document.getElementById("trending-gifos");

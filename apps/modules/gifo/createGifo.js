@@ -1,5 +1,6 @@
-import expand from "../gifo/expand.js";
-import isDesktop from "./isDesktop.js";
+import expand from "./expand.js";
+import isDesktop from "../utils/isDesktop.js";
+import favorite from './favorite.js';
 
 export default async function createGifo(gifos, gifosContainer, containerClass) {
   for (const gifo of gifos) {
@@ -62,6 +63,7 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
       user: userTag,
       title: titleTag,
       trendingPosition: gifosContainer.getBoundingClientRect(),
+      titleGifo: title,
     }
     maxTag.addEventListener(("click"), () => expand(gifoData));
 
@@ -70,5 +72,7 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
         expand(gifoData)
       }
     });
+
+    favTag.addEventListener(("click"), () => (favorite(gifoData)));
   }
 }

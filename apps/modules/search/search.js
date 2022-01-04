@@ -1,4 +1,4 @@
-import setGifos from '../utils/setGifos.js';
+import setGifos from '../gifo/setGifos.js';
 const API_KEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
 
 export default async function (text, value) {

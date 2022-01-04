@@ -1,5 +1,5 @@
 import search from "./search.js"
-import createGifo from '../utils/createGifo.js'
+import createGifo from '../gifo/createGifo.js';
 
 export default async function setSearchIntoDom(input) {
   const { value } = input;

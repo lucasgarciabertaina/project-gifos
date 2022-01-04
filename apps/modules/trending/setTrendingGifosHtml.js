@@ -1,7 +1,7 @@
 import getTrendingApi from "./get.js";
-import setGifos from './setGifos.js'
-import createGifo from '../utils/createGifo.js'
-import mobileScrollGifos from './mobileScrollGifos.js'
+import setGifos from './setGifos.js';
+import createGifo from '../gifo/createGifo.js';
+import mobileScrollGifos from './mobileScrollGifos.js';
 import desktopNewGifos from "./desktopNewGifos.js";
 const API_KEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
 
