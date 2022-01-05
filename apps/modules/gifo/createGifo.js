@@ -22,11 +22,11 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
     gifoHoverContainer.appendChild(iconsTag);
 
     const favTag = document.createElement("span");
-    favTag.setAttribute("class", "gifo__icon gifo__icon--fav");
+    favTag.setAttribute("class", "gifo__icon gifo__icon-fav");
     iconsTag.appendChild(favTag);
 
     const downTag = document.createElement("a");
-    downTag.setAttribute("class", "gifo__icon gifo__icon--download");
+    downTag.setAttribute("class", "gifo__icon gifo__icon-download");
     downTag.setAttribute("download", "gifo.gif");
 
     const response = await fetch(url + ".gif");
@@ -35,9 +35,8 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
     downTag.setAttribute("href", downloadUrl);
     iconsTag.appendChild(downTag);
 
-
     const maxTag = document.createElement("span");
-    maxTag.setAttribute("class", "gifo__icon gifo__icon--max");
+    maxTag.setAttribute("class", "gifo__icon gifo__icon-max");
     iconsTag.appendChild(maxTag);
 
     const { user } = gifo;
@@ -54,16 +53,16 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
     gifosContainer.appendChild(gifoContainer);
 
     const gifoData = {
-      container: gifoContainer,
-      gifo: gifoTag,
-      gifoIcons: iconsTag,
+      ...gifo,
+      containerTag: gifoContainer,
+      gifoTag: gifoTag,
+      gifoIconsTag: iconsTag,
       iconFav: favTag,
       iconDownload: downTag,
       iconMax: maxTag,
-      user: userTag,
-      title: titleTag,
+      userTag: userTag,
+      titleTag: titleTag,
       trendingPosition: gifosContainer.getBoundingClientRect(),
-      titleGifo: title,
     }
     maxTag.addEventListener(("click"), () => expand(gifoData));
 

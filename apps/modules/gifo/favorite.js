@@ -1,14 +1,30 @@
 export default function (gifoData) {
-  const isFav = localStorage.getItem("Favorites");
-  if (isFav) {
-    const favorites = JSON.parse(isFav);
-    favorites.push(gifoData.titleGifo);
-    localStorage.setItem("Favorites", JSON.stringify(favorites));
-    localStorage.setItem(gifoData.titleGifo, gifoData);
+  const data = {
+    url: gifoData.url,
+    title: gifoData.title,
+    user: gifoData.user,
+  }
+  const existFav = localStorage.getItem("Favorites");
+  if (existFav) {
+    const condition = localStorage.getItem(data.title)
+    if (condition) {
+      const removeGifo = JSON.parse(existFav).filter(gifoTitle => gifoTitle != data.title)
+      localStorage.setItem("Favorites", JSON.stringify(removeGifo));
+      localStorage.removeItem(data.title);
+      gifoData.iconFav.setAttribute("class", "gifo__icon gifo__icon-fav");
+    } else {
+      const favorites = JSON.parse(existFav);
+      favorites.push(data.title);
+      localStorage.setItem("Favorites", JSON.stringify(favorites));
+      localStorage.setItem(data.title, JSON.stringify(data));
+      gifoData.iconFav.setAttribute("class", "gifo__icon gifo__icon-fav--active");
+    }
   } else {
     const createFav = [];
-    createFav.push(gifoData.titleGifo);
+    createFav.push(data.title);
     localStorage.setItem("Favorites", JSON.stringify(createFav));
-    localStorage.setItem(gifoData.titleGifo, gifoData);
+    localStorage.setItem(data.title, JSON.stringify(data));
+    gifoData.iconFav.setAttribute("class", "gifo__icon gifo__icon-fav--active");
   }
+  return gifoData;
 }

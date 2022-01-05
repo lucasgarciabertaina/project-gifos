@@ -217,19 +217,19 @@ footer {
 .arrow__left--expand:hover {
   background-image: url("../images/button-slider-left-hover.svg");
 }
-.gifo__icon--fav:hover {
+.gifo__icon-fav:hover {
   background-image: url("../images/icon-fav-hover.svg");
 }
-.gifo__icon--fav:active {
+.gifo__icon-fav:active {
   background-image: url("../images/icon-fav-active.svg");
 }
-.gifo__icon--download:hover {
+.gifo__icon-download:hover {
   background-image: url("../images/icon-download-hover.svg");
 }
-.gifo__icon--max:hover {
+.gifo__icon-max:hover {
   background-image: url("../images/icon-max-hover.svg");
 }
-.gifo__icon--expand-expand:hover {
+.gifo__icon-max--expand:hover {
   background-image: url("../images/icon-max-hover.svg");
 }
 .arrow__right--expand:hover {
@@ -343,13 +343,13 @@ footer {
   margin-right: 10px;
   background-repeat: no-repeat;
 }
-.gifo__icon--fav {
+.gifo__icon-fav {
   background-image: url("../images/icon-fav.svg");
 }
-.gifo__icon--download {
+.gifo__icon-download {
   background-image: url("../images/icon-download.svg");
 }
-.gifo__icon--max {
+.gifo__icon-max {
   display: block;
   background-image: url("../images/icon-max-normal.svg");
 }
@@ -391,7 +391,7 @@ footer {
   top: 555px;
   right: calc(50% - 375px);
 }
-.gifo__icon--expand-expand {
+.gifo__icon-max--expand {
   background-image: url("../images/icon-max-normal.svg");
 }
 

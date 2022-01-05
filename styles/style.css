@@ -277,13 +277,13 @@ footer {
 .search-section__finder:active {
   outline: none;
 }
-.gifo__icon--download:hover {
+.gifo__icon-download:hover {
   background-image: url("../images/icon-download-hover.svg");
 }
-.gifo__icon--fav:hover {
+.gifo__icon-fav:hover {
   background-image: url("../images/icon-fav-hover.svg");
 }
-.gifo__icon--fav:active {
+.gifo__icon-fav:active {
   background-image: url("../images/icon-fav-active.svg");
 }
 .dark header nav .header__checkbox:checked + .header__burger-icon {
@@ -563,16 +563,19 @@ footer {
   margin-right: 10px;
   background-repeat: no-repeat;
 }
-.gifo__icon--fav {
+.gifo__icon-fav {
   background-image: url("../images/icon-fav.svg");
 }
-.gifo__icon--download {
+.gifo__icon-fav--active {
+  background-image: url("../images/icon-fav-active.svg");
+}
+.gifo__icon-download {
   background-image: url("../images/icon-download.svg");
 }
-.gifo__icon--max-expand {
+.gifo__icon-max--expand {
   display: none;
 }
-.gifo__icon--max {
+.gifo__icon-max {
   background-image: url("../images/icon-max.svg");
 }
 .gifo__user--expand {
