@@ -1,6 +1,7 @@
 import expand from "./expand.js";
 import isDesktop from "../utils/isDesktop.js";
 import favorite from './favorite.js';
+import isFavorite from "./isFavorite.js";
 
 export default async function createGifo(gifos, gifosContainer, containerClass) {
   for (const gifo of gifos) {
@@ -22,7 +23,11 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
     gifoHoverContainer.appendChild(iconsTag);
 
     const favTag = document.createElement("span");
-    favTag.setAttribute("class", "gifo__icon gifo__icon-fav");
+    if (isFavorite(gifo.title)) {
+      favTag.setAttribute("class", "gifo__icon gifo__icon-fav--active");
+    } else {
+      favTag.setAttribute("class", "gifo__icon gifo__icon-fav");
+    }
     iconsTag.appendChild(favTag);
 
     const downTag = document.createElement("a");
