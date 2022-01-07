@@ -6,9 +6,7 @@ import capitalize from '../utils/capitalize.js';
 const API_KEY = "DENft9K6PwvYPg4VZEJmkeY2iciLh2yb";
 
 
-export default async () => {
-  const searcher = document.getElementById("searcher");
-
+export default async (searcher) => {
   searcher.addEventListener("keydown", async (letter) => {
     const value = searcher.value + letter.key;
     if (value.length > 1) {

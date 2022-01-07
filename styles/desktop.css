@@ -7,6 +7,12 @@
 }
 
 /* Header */
+.header-sticky {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
 /* Header__Nav */
 .header__nav-bar {
   height: 100%;
@@ -23,6 +29,7 @@
   width: 55%;
   height: 100%;
   align-items: center;
+  padding-left: calc(10% - 10px);
 }
 .header__list-element {
   margin-top: 0;
@@ -267,6 +274,8 @@ footer {
   padding-top: 5%;
 }
 .gifos {
+  width: 80%;
+  justify-self: center;
   padding-top: 5%;
   gap: 30px;
 }
@@ -281,6 +290,9 @@ footer {
 }
 
 /* Dark Mode */
+.dark .header-sticky {
+  background-color: rgba(55, 56, 60, 1);
+}
 .dark
   header
   .header__nav-bar
