@@ -1,18 +1,19 @@
+import setSearch from "./setSearch.js";
+
 export default function (body) {
   const header = document.querySelector("header");
   header.setAttribute("class", "header-sticky");
 
-  const nav = document.querySelector("nav");
+  const nav = document.getElementsByTagName("nav")[0];
   const searchContainer = document.getElementById("searcher-container");
   const searcherSize = searchContainer.getBoundingClientRect();
-  console.log(nav.innerHTML);
 
-  const searchStickyString = `<div id="searcher-container-sticky" class="search-section__search">
+  const searchStickyString = `<div id="searcher-container-sticky" class="search-section__search--sticky">
   <div id="search-sticky" class="search">
-    <span class="search-section__icon-search"></span>
+    <span class="search-section__icon-search" id="icon-search-sticky"></span>
     <input
       class="search-section__finder"
-      id="searcher"
+      id="finder-sticky"
       type="text"
       placeholder="Busca GIFOS y más"
       value=""
@@ -20,14 +21,20 @@ export default function (body) {
     <span class="search-section__icon-close"></span>
   </div>
 </div>`
-  const searchStickyNode = new DOMParser().parseFromString(searchStickyString, "text/xml");
-  console.log(searchStickyNode);
+
+  const searchStickyNode = new DOMParser().parseFromString(searchStickyString, "text/html");
 
   window.addEventListener(("scroll"), () => {
     const position = body.getBoundingClientRect().y;
-    if (position <= -(searcherSize.top + searcherSize.height)) {
+    if (position <= -(searcherSize.top + searcherSize.height) && !document.getElementById("searcher-container-sticky")) {
       const listElementsContainer = document.querySelector("#elements-container")
-      nav.insertBefore(listElementsContainer, searchStickyNode);
+      nav.insertBefore(searchStickyNode.documentElement.childNodes[1].childNodes[0], listElementsContainer);
+      const finderSticky = document.getElementById("finder-sticky");
+      setSearch(finderSticky);
+    }
+    if (position > -(searcherSize.top + searcherSize.height) && document.getElementById("searcher-container-sticky")) {
+      const searchSticky = document.getElementById("searcher-container-sticky");
+      nav.removeChild(searchSticky);
     }
   })
 }

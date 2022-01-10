@@ -51,6 +51,17 @@ export default async (searcher) => {
       iconSearch.addEventListener(("click"), async () => {
         await setSearchIntoDom({ value: searcher.value });
       })
+
+      const searcherSticky = document.getElementById("searcher-container-sticky");
+      const nav = document.getElementsByTagName("nav")[0];
+      const iconSearchSticky = document.getElementById("icon-search-sticky");
+      iconSearchSticky.addEventListener(("click"), async () => {
+        const searcherMain = document.getElementById("searcher");
+        searcherMain.value = capitalize(searcher.value);
+        nav.removeChild(searcherSticky);
+        window.scrollTo(0, 0);
+        await setSearchIntoDom({ value: searcher.value });
+      })
     }
   })
 }
