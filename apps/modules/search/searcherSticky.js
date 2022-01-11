@@ -22,11 +22,11 @@ export default function (body) {
   </div>
 </div>`
 
-  const searchStickyNode = new DOMParser().parseFromString(searchStickyString, "text/html");
 
   window.addEventListener(("scroll"), () => {
     const position = body.getBoundingClientRect().y;
     if (position <= -(searcherSize.top + searcherSize.height) && !document.getElementById("searcher-container-sticky")) {
+      let searchStickyNode = new DOMParser().parseFromString(searchStickyString, "text/html");
       const listElementsContainer = document.querySelector("#elements-container")
       nav.insertBefore(searchStickyNode.documentElement.childNodes[1].childNodes[0], listElementsContainer);
       const finderSticky = document.getElementById("finder-sticky");

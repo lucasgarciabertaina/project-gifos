@@ -27,7 +27,7 @@
       media="screen and (min-width: 1200px)"
     />
   </head>
-  <body id="index">
+  <body id="favorite">
     <header class="header">
       <div class="header__container">
         <img class="logo" alt="logo-gifos" />
@@ -41,7 +41,7 @@
           </li>
           <span class="header__line-of-list-elements"></span>
           <li class="header__list-element">
-            <a class="header__list-link" href="./favorites.html">FAVORITOS</a>
+            <a class="header__list-link">FAVORITOS</a>
           </li>
           <span class="header__line-of-list-elements"></span>
           <li class="header__list-element">
@@ -56,36 +56,11 @@
     </header>
 
     <main>
-      <section class="search-section">
-        <h1 class="search-section__title">
-          Inspírate, busca, guarda, y crea los mejores
-          <span class="search-section__gifos-color">GIFOS</span>
-        </h1>
-        <img
-          class="search-section__image"
-          src="./images/ilustra_header.svg"
-          alt=""
-        />
-        <div id="searcher-container" class="search-section__search">
-          <div id="search" class="search">
-            <span id="icon-search" class="search-section__icon-search"></span>
-            <input
-              class="search-section__finder"
-              id="searcher"
-              type="text"
-              placeholder="Busca GIFOS y más"
-              value=""
-            />
-            <span id="icon-close" class="search-section__icon-close"></span>
-          </div>
-          <span id="divisor" class="search-section__divisor"></span>
-        </div>
-        <section id="find">
-          <h3 id="trending-title" class="search-section__trending-title">Trending:</h3>
-          <p class="search-section__trending-paragraph">
-            Reactions, Entertainment, Sports, Stickers, Artists
-          </p>
-        </section>
+      <section class="favorites" id="favorites">
+        <span class="favorites__logo"></span>
+        <h2 class="favorites__title">Favoritos</h2>
+        <section class="favorites__gifos" id="favorites-gifos"></section>
+      </section>
       </section>
       <section class="trending" id="section__trending">
         <h2 class="trending__title">Trending GIFOS</h2>
