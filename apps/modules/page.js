@@ -16,6 +16,7 @@ export function page(htmlPage) {
       setTrendingGifos();
       break;
     case "favorite":
+      darkMode('favorite');
       getGifos();
       setTrendingGifos();
   }

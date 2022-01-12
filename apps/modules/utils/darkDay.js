@@ -1,5 +1,6 @@
-export default function darkDay(condition) {
-  const body = document.getElementById("index")
+export default function darkDay(condition, page) {
+  const body = document.getElementById(page);
+  console.log(body);
   const mode = document.getElementById("mode");
   if (condition) {
     sessionStorage.setItem("modo", "Modo Diurno");

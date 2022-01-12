@@ -5,9 +5,10 @@ export default (page) => {
   const mode = document.getElementById("mode");
   switch (page) {
     case 'index':
-      darkDay(!isDark());
+    case 'favorite':
+      darkDay(!isDark(), page);
       mode.addEventListener(("click"), () => {
-        darkDay(isDark());
+        darkDay(isDark(), page);
       });
       break;
 

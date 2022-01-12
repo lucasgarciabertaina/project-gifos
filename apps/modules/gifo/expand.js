@@ -30,13 +30,12 @@ export default function expandGifo(gifoData) {
       body.setAttribute("class", "dark");
     }
     checkbox.disabled = false;
-    window.scrollTo(0, gifoData.trendingPosition.y);
     burgerIcon.setAttribute("class", "header__burger-icon");
 
     gifoData.containerTag.setAttribute("class", containerClass);
     gifoData.gifoTag.setAttribute("class", "gifo");
 
-    gifoData.iconsTag.setAttribute("class", "gifo__icons");
+    gifoData.gifoIconsTag.setAttribute("class", "gifo__icons");
     gifoData.iconFav.setAttribute("class", "gifo__icon gifo__icon-download");
     gifoData.iconDownload.setAttribute("class", "gifo__icon gifo__icon-download");
     gifoData.iconMax.setAttribute("class", "gifo__icon gifo__icon-max");
@@ -44,5 +43,7 @@ export default function expandGifo(gifoData) {
     gifoData.titleTag.setAttribute("class", "gifo__title");
 
     checkbox.style.display = "block";
+    console.log(gifoData.trendingPosition)
+    window.scrollTo(0, gifoData.trendingPosition.top + gifoData.trendingPosition.y);
   })
 }
