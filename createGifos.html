@@ -48,64 +48,36 @@
             <a class="header__list-link" href="#">MIS GIFOS</a>
           </li>
           <a
-            class="header__add-icon header__line-of-list-elements"
-            href="./createGifos.html"
+            class="header__add-icon--active header__line-of-list-elements"
+            href="#"
           ></a>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="search-section">
-        <h1 class="search-section__title">
-          Inspírate, busca, guarda, y crea los mejores
-          <span class="search-section__gifos-color">GIFOS</span>
-        </h1>
-        <img
-          class="search-section__image"
-          src="./images/ilustra_header.svg"
-          alt=""
-        />
-        <div id="searcher-container" class="search-section__search">
-          <div id="search" class="search">
-            <span id="icon-search" class="search-section__icon-search"></span>
-            <input
-              class="search-section__finder"
-              id="searcher"
-              type="text"
-              placeholder="Busca GIFOS y más"
-              value=""
-            />
-            <span id="icon-close" class="search-section__icon-close"></span>
-          </div>
-          <span id="divisor" class="search-section__divisor"></span>
-        </div>
-        <section id="find">
-          <h3 id="trending-title" class="search-section__trending-title">Trending:</h3>
-          <p class="search-section__trending-paragraph">
-            Reactions, Entertainment, Sports, Stickers, Artists
+      <section class="create-gifo">
+        <section class="create-gifo__container">
+          <h2 class="create-gifo__title"">
+            Aquí podrás <br> crear tus propios <span class="create-gifo__title--secondary">GIFOS</span>
+          </h2>
+          <p class="create-gifo__paragraph">
+            ¡Crea tu GIFO en sólo 3 pasos!<br>(sólo necesitas una cámara para
+            grabar un video)
           </p>
+          <span class="create-gifo__line create-gifo__line--top-left"></span>
+          <span class="create-gifo__line create-gifo__line--top-right"></span>
+          <span class="create-gifo__line create-gifo__line--bottom-left"></span>
+          <span class="create-gifo__line create-gifo__line--bottom-right"></span>
         </section>
+        <ul class="steps">
+          <li class="steps__step">1</li>
+          <li class="steps__step">2</li>
+          <li class="steps__step">3</li>
+        </ul>
+        <span class="line-break"></span>
+        <button class="create-gifo___button">COMENZAR</button>
       </section>
-      <section class="trending" id="section__trending">
-        <h2 class="trending__title">Trending GIFOS</h2>
-        <p class="trending__paragraph trending__paragraph--top">
-          Mira los últimos
-        </p>
-        <p class="trending__paragraph trending__paragraph--bottom">
-          GIFOS de nuestra comunidad.
-        </p>
-        <section class="trending__container" id="trending-container">
-          <span
-            class="trending__arrow trending__arrow--left"
-            id="arrow-left"
-          ></span>
-          <div class="trending__gifos" id="trending-gifos"></div>
-          <span
-            class="trending__arrow trending__arrow--right"
-            id="arrow-right"
-          ></span>
-        </section>
     </main>
 
     <footer>
