@@ -12,12 +12,16 @@ export function page(htmlPage) {
         searcherSticky(htmlPage);
       }
       setSearch(searcher);
-      darkMode('index');
       setTrendingGifos();
+      darkMode(htmlPage);
       break;
     case "favorite":
-      darkMode('favorite');
       getGifos();
       setTrendingGifos();
+      darkMode(htmlPage);
+      break;
+    case "create-gifos":
+      darkMode(htmlPage);
+      break;
   }
 }

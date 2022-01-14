@@ -3,19 +3,12 @@ import isDark from "./utils/isDark.js";
 
 export default (page) => {
   const mode = document.getElementById("mode");
-  switch (page) {
-    case 'index':
-    case 'favorite':
-      darkDay(!isDark(), page);
-      mode.addEventListener(("click"), () => {
-        darkDay(isDark(), page);
-      });
-      break;
-
-    default:
-      break;
-  }
+  darkDay(!isDark(), page);
+  mode.addEventListener(("click"), () => {
+    darkDay(isDark(), page);
+  });
 }
+
 
 // function darkmode() {
 //   let body = document.getElementsByTagName("body");

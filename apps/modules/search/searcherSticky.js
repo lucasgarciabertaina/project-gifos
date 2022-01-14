@@ -1,6 +1,7 @@
 import setSearch from "./setSearch.js";
 
-export default function (body) {
+export default function (bodyId) {
+  const body = document.getElementById(bodyId);
   const header = document.querySelector("header");
   header.setAttribute("class", "header-sticky");
 

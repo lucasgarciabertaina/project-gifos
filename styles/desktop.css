@@ -13,6 +13,9 @@
   top: 0;
   background-color: rgba(255, 255, 255, 1);
 }
+.logo {
+  content: url("../images/logo-desktop.svg");
+}
 /* Header__Nav */
 .header__nav-bar {
   height: 100%;
@@ -176,6 +179,7 @@
 
 footer {
   flex-direction: row;
+  height: 116px;
 }
 .footer__desktop-divisor {
   width: 35%;
@@ -289,6 +293,14 @@ footer {
 .dark main .trending .trending__container .trending__arrow--right:hover {
   background-image: url("../images/button-slider-right-md-noct-hover.png");
 }
+.dark main .create-gifo .create-gifo___button:hover {
+  background-color: white;
+  color: rgba(55, 56, 60, 1);
+}
+.create-gifo___button:hover {
+  background-color: var(--principal_color);
+  color: white;
+}
 
 /* Searcher Active */
 
@@ -331,13 +343,18 @@ footer {
 .dark .header-sticky {
   background-color: rgba(55, 56, 60, 1);
 }
+.dark header .header__container .logo {
+  content: url("../images/Logo-modo-noc.svg");
+}
+.dark header .header__nav-bar .header__elements-container .header__list-link {
+  color: white;
+}
 .dark
   header
   .header__nav-bar
   .header__elements-container
-  .header__list-element
-  .header__list-link {
-  color: white;
+  .header__add-icon--active {
+  background-color: inherit;
 }
 .dark header .header__nav-bar .header__elements-container .header__add-icon {
   background-image: url("../images/CTA-crear-gifo-modo-noc.svg");
@@ -369,6 +386,33 @@ footer {
   .search
   .search-section__icon-search {
   background-image: url(../images/icon-search-mod-noc.svg);
+}
+.dark main .create-gifo .create-gifo__container {
+  border-color: white;
+}
+.dark main .create-gifo .create-gifo__container .create-gifo__title {
+  color: white;
+}
+.dark main .create-gifo .create-gifo__container .create-gifo__paragraph {
+  color: white;
+}
+.dark main .create-gifo .steps .steps__step {
+  border-color: white;
+  color: white;
+}
+.dark main .create-gifo .line-break {
+  background-color: white;
+}
+.dark main .create-gifo .create-gifo___camera {
+  background-image: url("../images/camara-modo-noc.svg");
+}
+.dark main .create-gifo .create-gifo___roll {
+  background-image: url("../images/pelicula-modo-noc.svg");
+}
+.dark main .create-gifo .create-gifo___button {
+  background-color: rgba(55, 56, 60, 1);
+  color: white;
+  border-color: white;
 }
 /* Gifo */
 .gifo__hover-container {
@@ -587,4 +631,44 @@ footer {
   border: 1px solid var(--principal_color);
   border-radius: 25px;
   font-weight: bold;
+}
+.create-gifo___camera {
+  position: absolute;
+  top: 105px;
+  left: calc(10% + 65px);
+  display: inline-block;
+  width: 123px;
+  height: 162px;
+  background-image: url(../images/camara.svg);
+  background-repeat: no-repeat;
+}
+.create-gifo___camera-light {
+  position: absolute;
+  top: 124px;
+  left: calc(15% + 115px);
+  display: inline-block;
+  width: 91px;
+  height: 151px;
+  background-image: url(../images/element-luz-camara.svg);
+  background-repeat: no-repeat;
+}
+.create-gifo___roll {
+  position: absolute;
+  bottom: 124px;
+  right: calc(15% + 115px);
+  display: inline-block;
+  width: 142px;
+  height: 88px;
+  background-image: url(../images/element_cinta2.svg);
+  background-repeat: no-repeat;
+}
+.create-gifo___roll {
+  position: absolute;
+  bottom: 75px;
+  right: calc(10% + 40px);
+  display: inline-block;
+  width: 142px;
+  height: 88px;
+  background-image: url(../images/pelicula.svg);
+  background-repeat: no-repeat;
 }
