@@ -4,6 +4,7 @@ import setSearch from "../modules/search/setSearch.js";
 import isDesktop from "../modules/utils/isDesktop.js";
 import searcherSticky from "./search/searcherSticky.js";
 import getGifos from "./favorites/getGifos.js";
+import createGifo from './createGifos/createGifo.js';
 
 export function page(htmlPage) {
   switch (htmlPage) {
@@ -22,6 +23,7 @@ export function page(htmlPage) {
       break;
     case "create-gifos":
       darkMode(htmlPage);
+      createGifo();
       break;
   }
 }

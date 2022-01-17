@@ -400,6 +400,11 @@ footer {
   border-color: white;
   color: white;
 }
+.dark main .create-gifo .steps .steps__step--active {
+  background-color: white;
+  color: rgba(55, 56, 60, 1);
+  border-color: white;
+}
 .dark main .create-gifo .line-break {
   background-color: white;
 }
@@ -610,6 +615,18 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.steps__step--active {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  font-size: 1.8rem;
+  border: 1px solid var(--principal_color);
+  background-color: var(--principal_color);
+  color: white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
 
 .line-break {
   display: block;
@@ -635,7 +652,7 @@ footer {
 .create-gifo___camera {
   position: absolute;
   top: 105px;
-  left: calc(10% + 65px);
+  left: calc(5% - 25px);
   display: inline-block;
   width: 123px;
   height: 162px;
@@ -645,7 +662,7 @@ footer {
 .create-gifo___camera-light {
   position: absolute;
   top: 124px;
-  left: calc(15% + 115px);
+  left: calc(5% + 99px);
   display: inline-block;
   width: 91px;
   height: 151px;
@@ -654,21 +671,23 @@ footer {
 }
 .create-gifo___roll {
   position: absolute;
-  bottom: 124px;
-  right: calc(15% + 115px);
-  display: inline-block;
-  width: 142px;
-  height: 88px;
-  background-image: url(../images/element_cinta2.svg);
-  background-repeat: no-repeat;
-}
-.create-gifo___roll {
-  position: absolute;
   bottom: 75px;
-  right: calc(10% + 40px);
+  right: calc(5% - 5px);
   display: inline-block;
   width: 142px;
   height: 88px;
   background-image: url(../images/pelicula.svg);
   background-repeat: no-repeat;
+}
+.create-gifo__video-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.player {
+  display: flex;
+  width: 480px;
+  height: 320px;
 }
