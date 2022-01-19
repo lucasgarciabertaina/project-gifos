@@ -419,6 +419,9 @@ footer {
   color: white;
   border-color: white;
 }
+.dark main .create-gifo .create-gifo__timer {
+  color: white;
+}
 /* Gifo */
 .gifo__hover-container {
   width: 100%;
@@ -690,4 +693,13 @@ footer {
   display: flex;
   width: 480px;
   height: 320px;
+}
+.create-gifo__timer {
+  position: absolute;
+  bottom: 95px;
+  right: calc(25% + 36px);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 22px;
 }

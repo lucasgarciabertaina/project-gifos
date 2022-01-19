@@ -1,3 +1,5 @@
+import setTimer from "./timer.js"
+
 export default async function (stream) {
   const videoContainer = document.getElementById("video-container");
   const buttonGifos = document.getElementById("button-steps");
@@ -10,6 +12,21 @@ export default async function (stream) {
   videoContainer.setAttribute("class", "create-gifo__video-container");
   videoContainer.innerHTML = `<video id="player" class="player"></video>`
   const video = document.getElementById("player");
-  video.srcObject = stream;
-  video.play();
+  buttonGifos.addEventListener(("click"), () => {
+    video.srcObject = stream;
+    video.play()
+    const container = document.getElementById("create-gifo");
+    const timer = document.createElement("p");
+    timer.setAttribute("class", "create-gifo__timer");
+    container.appendChild(timer);
+
+    for (let i = 0; i < 7200; i++) {
+      setTimeout(
+        (function () {
+          let _i = i;
+          (function () { timer.innerHTML = setTimer(_i) })();
+        })(), 1000);
+    }
+  })
 }
+
