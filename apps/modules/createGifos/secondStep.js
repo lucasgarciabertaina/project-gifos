@@ -1,4 +1,5 @@
-import setTimer from "./timer.js"
+import setTimer from "./timer.js";
+import uploadGifo from "./uploadGifo.js";
 
 export default async function (stream) {
   const videoContainer = document.getElementById("video-container");
@@ -13,20 +14,27 @@ export default async function (stream) {
   videoContainer.innerHTML = `<video id="player" class="player"></video>`
   const video = document.getElementById("player");
   buttonGifos.addEventListener(("click"), () => {
+    buttonGifos.innerHTML = "FINALIZAR";
+    let recorder = RecordRTC(stream, {
+      type: 'gif',
+      frameRate: 1,
+      quality: 10,
+      width: 360,
+      hidden: 240,
+    })
     video.srcObject = stream;
     video.play()
+    recorder.startRecording();
     const container = document.getElementById("create-gifo");
     const timer = document.createElement("p");
     timer.setAttribute("class", "create-gifo__timer");
     container.appendChild(timer);
-
-    for (let i = 0; i < 7200; i++) {
-      setTimeout(
-        (function () {
-          let _i = i;
-          (function () { timer.innerHTML = setTimer(_i) })();
-        })(), 1000);
-    }
+    buttonGifos.addEventListener(("click"), async () => {
+      await recorder.stopRecording();
+      const form = new FormData();
+      form.append('file', recorder.getBlob(), 'myGif.gif');
+      console.log(form.get("file"))
+    })
   })
 }
 

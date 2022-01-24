@@ -9,7 +9,10 @@ export default async function () {
   buttonSteps.style.display = "none";
   step1.setAttribute("class", "steps__step--active")
   try {
-    stream = await navigator.mediaDevices.getUserMedia({ video: { height: { max: 480 } } });
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: { height: { max: 480 } },
+      audio: false,
+    });
     return stream;
   } catch (err) {
     alert("Debes aceptar la cámara para crear el GIFO!")
