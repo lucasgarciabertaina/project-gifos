@@ -422,6 +422,9 @@ footer {
 .dark main .create-gifo .create-gifo__timer {
   color: white;
 }
+.dark main .create-gifo .create-gifo__repeat {
+  color: white;
+}
 /* Gifo */
 .gifo__hover-container {
   width: 100%;
@@ -702,4 +705,16 @@ footer {
   font-size: 1.5rem;
   letter-spacing: 0;
   line-height: 22px;
+}
+.create-gifo__repeat {
+  display: inline;
+  position: absolute;
+  bottom: 100px;
+  right: calc(25% + 36px);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--secundary_color);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
 }
