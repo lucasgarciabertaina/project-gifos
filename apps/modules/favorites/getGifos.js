@@ -6,8 +6,8 @@ export default function () {
   if (favorites === null) {
     favoritesContainer.style.flexDirection = "column";
     favoritesContainer.innerHTML = `
-    <span class="favorites__logo--without-content"></span>
-    <p class="favorites_paragraph">"¡Guarda tu primer GIFO en Favoritos 
+    <span class="favorites-my-gifos__logo-without-content favorites-my-gifos__logo-without-content--favorites"></span>
+    <p class="favorites-my-gifos_paragraph">"¡Guarda tu primer GIFO en Favoritos 
     para que se muestre aquí!"</p>
     `
   } else {
@@ -23,7 +23,7 @@ export default function () {
       const container = document.getElementById("favorites");
 
       const seeMore = document.createElement("button");
-      seeMore.setAttribute("class", "favorites_see-more");
+      seeMore.setAttribute("class", "favorites-my-gifos_see-more");
       seeMore.innerHTML = "VER MÁS";
       container.appendChild(seeMore);
       let previousValue = counter;

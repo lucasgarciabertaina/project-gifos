@@ -2,11 +2,14 @@ import expand from "./expand.js";
 import isDesktop from "../utils/isDesktop.js";
 import favorite from './favorite.js';
 import isFavorite from "./isFavorite.js";
+import removeMyGifo from "./removeMyGifo.js";
 
-export default async function createGifo(gifos, gifosContainer, containerClass) {
+export default async function createGifo(input) {
+  const { gifos, gifosContainer, containerClass, isMyGifo, id } = input;
   for (const gifo of gifos) {
     const gifoContainer = document.createElement("div");
     gifoContainer.setAttribute("class", containerClass);
+
 
     const gifoTag = document.createElement("img");
     const { url } = gifo;
@@ -22,13 +25,21 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
     iconsTag.setAttribute("class", "gifo__icons");
     gifoHoverContainer.appendChild(iconsTag);
 
-    const favTag = document.createElement("span");
-    if (isFavorite(gifo.title)) {
-      favTag.setAttribute("class", "gifo__icon gifo__icon-fav--active");
+    let favTag;
+    let trashTag;
+    if (!isMyGifo) {
+      favTag = document.createElement("span");
+      if (isFavorite(gifo.title)) {
+        favTag.setAttribute("class", "gifo__icon gifo__icon-fav--active");
+      } else {
+        favTag.setAttribute("class", "gifo__icon gifo__icon-fav");
+      }
+      iconsTag.appendChild(favTag);
     } else {
-      favTag.setAttribute("class", "gifo__icon gifo__icon-fav");
+      trashTag = document.createElement("span");
+      trashTag.setAttribute("class", "gifo__icon gifo__icon-trash")
+      iconsTag.appendChild(trashTag);
     }
-    iconsTag.appendChild(favTag);
 
     const downTag = document.createElement("a");
     downTag.setAttribute("class", "gifo__icon gifo__icon-download");
@@ -68,6 +79,7 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
       userTag: userTag,
       titleTag: titleTag,
       trendingPosition: gifosContainer.getBoundingClientRect(),
+      id
     }
     maxTag.addEventListener(("click"), () => expand(gifoData));
 
@@ -77,6 +89,10 @@ export default async function createGifo(gifos, gifosContainer, containerClass) 
       }
     });
 
-    favTag.addEventListener(("click"), () => (favorite(gifoData)));
+    if (isMyGifo) {
+      trashTag.addEventListener(("click"), () => (removeMyGifo(gifoData)));
+    } else {
+      favTag.addEventListener(("click"), () => (favorite(gifoData)));
+    }
   }
 }

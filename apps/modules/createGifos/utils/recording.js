@@ -1,4 +1,5 @@
 import saveData from "./saveData.js";
+import createGifo from "../createGifo.js";
 
 export default function recording(input) {
   const { video, recorder, buttonFinally, stream } = input;
@@ -50,13 +51,15 @@ export default function recording(input) {
     const buttonUpload = secondaryDocument.getElementById("upload-gifo");
     container.appendChild(buttonUpload);
 
-    await recorder.stopRecording(() => {
-      console.log("Stop recording");
-    });
+    await recorder.stopRecording();
+    const blob = await recorder.getBlob();
 
     container.removeChild(buttonFinally);
     buttonUpload.addEventListener(("click"), async () => {
-      saveData({ recorder, stream })
+      await saveData({ recorder, stream, blob })
+    });
+    repeat.addEventListener(("click"), () => {
+      createGifo()
     })
   })
 }

@@ -73,7 +73,7 @@ header {
   color: white;
   font-weight: bold;
 }
-.header__list-link--active{
+.header__list-link--active {
   text-decoration: none;
   font-size: 1.5rem;
   text-align: center;
@@ -498,7 +498,7 @@ footer {
 .dark header .header__burger-icon--gifo-expand {
   background-image: url("../images/close-modo-noct.svg");
 }
-.dark main .favorite .favorites__title {
+.dark main .favorites-my-gifos .favorites-my-gifos__title {
   color: var(--dark_mode);
 }
 .dark main .search-section .find .find__title {
@@ -509,10 +509,10 @@ footer {
   border-color: white;
   color: white;
 }
-.dark main .favorites .favorites__title {
+.dark main .favorites-my-gifos .favorites-my-gifos__title {
   color: var(--dark_mode);
 }
-.dark main .favorites .favorites_see-more {
+.dark main .favorites-my-gifos .favorites-my-gifos_see-more {
   color: var(--dark_mode);
   background-color: rgba(55, 56, 60, 1);
   border-color: var(--dark_mode);
@@ -582,6 +582,9 @@ footer {
   margin-right: 10px;
   background-repeat: no-repeat;
 }
+.gifo__icon-trash {
+  background-image: url("../images/icon-trash-normal.svg");
+}
 .gifo__icon-fav {
   background-image: url("../images/icon-fav.svg");
 }
@@ -620,30 +623,40 @@ footer {
   overflow: hidden;
 }
 
-/* Favorites */
-.favorites {
+/* Favorites & My Gifos */
+.favorites-my-gifos {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 0;
 }
-.favorites__logo {
+.favorites-my-gifos__logo {
   display: block;
   width: 28px;
   height: 21px;
-  background-image: url("../images/icon-favoritos.svg");
   background-repeat: no-repeat;
   margin: 11px 0;
 }
-.favorites__logo--without-content {
+.favorites-my-gifos__logo--favorites {
+  background-image: url("../images/icon-favoritos.svg");
+}
+.favorites-my-gifos__logo--my-gifos {
+  background-image: url("../images/icon-mis-gifos.svg");
+}
+.favorites-my-gifos__logo-without-content {
   display: block;
   width: 150px;
   height: 151px;
-  background-image: url("../images/icon-fav-sin-contenido.svg");
   background-repeat: no-repeat;
   margin: 74px auto 23px auto;
 }
-.favorites_paragraph {
+.favorites-my-gifos__logo-without-content--favorites {
+  background-image: url("../images/icon-fav-sin-contenido.svg");
+}
+.favorites-my-gifos__logo-without-content--my-gifos {
+  background-image: url("../images/icon-mis-gifos-sin-contenido.svg");
+}
+.favorites-my-gifos_paragraph {
   text-align: center;
   font-size: 2.2rem;
   color: var(--secondary_color);
@@ -651,20 +664,20 @@ footer {
   padding-bottom: 137px;
   margin: 0 10%;
 }
-.favorites__title {
+.favorites-my-gifos__title {
   text-align: center;
   font-size: 2.5rem;
   line-height: 30px;
   padding-bottom: 36px;
 }
-.favorites__gifos {
+.favorites-my-gifos__gifos {
   display: flex;
   gap: 30px;
   padding: 0 5%;
   flex-wrap: wrap;
   justify-content: center;
 }
-.favorites_see-more {
+.favorites-my-gifos_see-more {
   display: block;
   margin: 5% auto;
   padding: 15px 25px;

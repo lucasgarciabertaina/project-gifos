@@ -1,10 +1,28 @@
-export default function saveData(input) {
-  const { stream, recorder } = input;
-  console.log(stream);
-  console.log(recorder);
-  const blob = recorder.getBlob();
-  console.log(blob)
+import uploadGifo from "./uploadGifo.js";
+import getGifo from "../getGifo.js";
+
+export default async function saveData(input) {
+  const { recorder, stream, blob } = input;
   const form = new FormData();
   form.append('file', blob, 'myGif.gif');
-  console.log(form);
+
+  const id = await uploadGifo(form);
+  const myGifoObject = await getGifo(id);
+
+  const myGifo = {
+    url: myGifoObject.images.original.url,
+    title: myGifoObject.title,
+    user: myGifoObject.username != "" ? myGifoObject.username : "User",
+    id
+  };
+
+  let myGifos;
+  if (!localStorage.getItem('myGifos')) {
+    myGifos = [];
+  } else {
+    myGifos = JSON.parse(localStorage.getItem('myGifos'));
+  }
+  myGifos.push(myGifo.id);
+  localStorage.setItem(myGifo.id, JSON.stringify(myGifo));
+  localStorage.setItem("myGifos", JSON.stringify(myGifos));
 }

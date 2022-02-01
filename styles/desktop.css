@@ -265,6 +265,9 @@ footer {
 .gifo__icon-fav:hover {
   background-image: url("../images/icon-fav-hover.svg");
 }
+.gifo__icon-trash:hover {
+  background-image: url("../images/icon-trash-hover.svg");
+}
 .gifo__icon-fav:active {
   background-image: url("../images/icon-fav-active.svg");
 }
@@ -538,8 +541,8 @@ footer {
   right: calc(10% - 15px);
 }
 
-/* Favorites */
-.favorites_paragraph {
+/* Favorites & My Gifos*/
+.favorites-my-gifos_paragraph {
   margin: 0 20%;
 }
 

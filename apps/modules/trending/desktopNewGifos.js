@@ -8,5 +8,5 @@ export default function (gifosAdd, trendingGifos) {
   gifosContainer.removeChild(gifosToDelete[0])
   gifosContainer.removeChild(gifosToDelete[0])
   let gifos = setGifos(trendingGifos, gifosAdd);
-  createGifo(gifos, gifosContainer, "trending__gifo");
+  createGifo({ gifos, gifosContainer, containerClass: "trending__gifo" });
 }

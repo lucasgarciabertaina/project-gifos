@@ -3,7 +3,8 @@ import setTrendingGifos from './trending/setTrendingGifosHtml.js';
 import setSearch from "../modules/search/setSearch.js";
 import isDesktop from "../modules/utils/isDesktop.js";
 import searcherSticky from "./search/searcherSticky.js";
-import getGifos from "./favorites/getGifos.js";
+import getFavoritesGifos from "./favorites/getGifos.js";
+import getMyGifos from "./myGifos/getGifos.js";
 import createGifo from './createGifos/createGifo.js';
 
 export function page(htmlPage) {
@@ -17,7 +18,7 @@ export function page(htmlPage) {
       darkMode(htmlPage);
       break;
     case "favorite":
-      getGifos();
+      getFavoritesGifos();
       setTrendingGifos();
       darkMode(htmlPage);
       break;
@@ -25,5 +26,9 @@ export function page(htmlPage) {
       darkMode(htmlPage);
       createGifo();
       break;
+    case "my-gifos":
+      getMyGifos();
+      setTrendingGifos();
+      darkMode(htmlPage);
   }
 }

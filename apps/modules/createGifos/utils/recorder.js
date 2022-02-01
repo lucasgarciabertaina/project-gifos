@@ -10,15 +10,14 @@ export default function (input) {
   const buttonFinally = secondaryDocument.getElementById("recording");
   container.appendChild(buttonFinally);
 
-  const recorder = RecordRTC(stream, {
+  const recorder =  new RecordRTCPromisesHandler(stream, {
     type: 'gif',
+    mimeType: 'video/webm',
+    recorderType: GifRecorder,
     frameRate: 1,
     quality: 10,
     width: 360,
     hidden: 240,
-    onGifRecordingStarted: function () {
-      console.log('started')
-    },
   })
 
   video.srcObject = stream;

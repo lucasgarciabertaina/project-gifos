@@ -9,7 +9,7 @@ export default async function setHtml() {
   const trendingGifos = await getTrendingApi(API_KEY);
   let gifos = setGifos(trendingGifos, 0);
   const gifosContainer = document.getElementById("trending-gifos");
-  createGifo(gifos, gifosContainer, "trending__gifo");
+  createGifo({ gifos, gifosContainer, containerClass: "trending__gifo" });
 
   let position = 0;
   let condition = 10000;
