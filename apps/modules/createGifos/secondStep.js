@@ -18,7 +18,14 @@ export default async function (stream) {
   step2.setAttribute("class", "steps__step--active");
 
   videoContainer.setAttribute("class", "create-gifo__video-container");
-  videoContainer.innerHTML = `<video id="player" class="player"></video>`
+  videoContainer.innerHTML = `
+  <video id="player" class="player"></video>
+  <div id="success-container" class="none" >
+  <div class="none"></div>
+  <span id="image-upload"class="none" ></span>
+  <p id="text-upload" class="none">Estamos subiendo tu GIFO</p>
+  </div>
+  `
   const video = document.getElementById("player");
 
   buttonStart.addEventListener(("click"), () => {

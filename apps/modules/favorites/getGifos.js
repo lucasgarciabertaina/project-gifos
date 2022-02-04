@@ -18,7 +18,7 @@ export default function () {
         return index < counter
       })
       .map(title => { return JSON.parse(localStorage.getItem(title)) });
-    createGifo(gifos, favoritesContainer, "gifo-container");
+    createGifo({ gifos, gifosContainer: favoritesContainer, containerClass: "gifo-container" });
     if (gifoTitles.length > 12) {
       const container = document.getElementById("favorites");
 

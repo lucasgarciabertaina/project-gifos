@@ -2,7 +2,7 @@ import uploadGifo from "./uploadGifo.js";
 import getGifo from "../getGifo.js";
 
 export default async function saveData(input) {
-  const { recorder, stream, blob } = input;
+  const { blob } = input;
   const form = new FormData();
   form.append('file', blob, 'myGif.gif');
 

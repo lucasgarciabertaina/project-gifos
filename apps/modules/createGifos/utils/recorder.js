@@ -10,7 +10,7 @@ export default function (input) {
   const buttonFinally = secondaryDocument.getElementById("recording");
   container.appendChild(buttonFinally);
 
-  const recorder =  new RecordRTCPromisesHandler(stream, {
+  const recorder = new RecordRTCPromisesHandler(stream, {
     type: 'gif',
     mimeType: 'video/webm',
     recorderType: GifRecorder,
@@ -22,6 +22,5 @@ export default function (input) {
 
   video.srcObject = stream;
   video.play()
-  recorder.startRecording();
   recording({ video, recorder, buttonFinally, stream });
 }
