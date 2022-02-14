@@ -2,7 +2,7 @@ import expand from "./expand.js";
 import isDesktop from "../utils/isDesktop.js";
 import favorite from './favorite.js';
 import isFavorite from "./isFavorite.js";
-import removeMyGifo from "./removeMyGifo.js";
+import removeMyGifo from "../myGifos/removeMyGifo.js";
 
 export default async function createGifo(input) {
   const { gifos, gifosContainer, containerClass, isMyGifo, id } = input;

@@ -60,12 +60,7 @@ export default function recording(input) {
 
     container.removeChild(buttonFinally);
     buttonUpload.addEventListener(("click"), async () => {
-      const successContainer = document.getElementById("success-container");
-      successContainer.setAttribute("class", "success-container")
-      const imageLoading = document.getElementById("image-upload");
-      imageLoading.setAttribute("class", "success-container___video-image success-container___video-image--loader")
-      const textLoading = document.getElementById("text-upload");
-      textLoading.setAttribute("class", "success-container___video--loader-text")
+      
 
       container.removeChild(buttonUpload);
       container.removeChild(repeat);

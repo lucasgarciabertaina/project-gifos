@@ -1,7 +1,10 @@
 import uploadGifo from "./uploadGifo.js";
 import getGifo from "../getGifo.js";
+import chargeDisplay from "./chargeDisplay.js"
+import finishChargeDisplay from "./finishChargeDisplay.js";
 
 export default async function saveData(input) {
+  chargeDisplay();
   const { blob } = input;
   const form = new FormData();
   form.append('file', blob, 'myGif.gif');
@@ -25,4 +28,5 @@ export default async function saveData(input) {
   myGifos.push(myGifo.id);
   localStorage.setItem(myGifo.id, JSON.stringify(myGifo));
   localStorage.setItem("myGifos", JSON.stringify(myGifos));
+  finishChargeDisplay();
 }

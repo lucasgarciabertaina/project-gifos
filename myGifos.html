@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Busca, comparte y crea los GIFOS que más te gusten!"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIFOS</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/style.css"
+      media="screen and (min-width: 375px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/desktop.css"
+      media="screen and (min-width: 1200px)"
+    />
+  </head>
+  <body id="my-gifos">
+    <header class="header">
+      <div class="header__container">
+        <a href="./index.html">
+          <img class="logo" alt="logo-gifos" />
+        </a>
+      </div>
+      <nav class="header__nav-bar">
+        <input id="header-checkbox" class="header__checkbox" type="checkbox" />
+        <span class="header__burger-icon" id="burger-icon"></span>
+        <ul id="elements-container" class="header__elements-container">
+          <li class="header__list-element">
+            <a class="header__list-link" id="mode">MODO NOCTURNO</a>
+          </li>
+          <span class="header__line-of-list-elements"></span>
+          <li class="header__list-element">
+            <a class="header__list-link" href="./favorites.html">FAVORITOS</a>
+          </li>
+          <span class="header__line-of-list-elements"></span>
+          <li class="header__list-element">
+            <a class="header__list-link--active" href="./myGifos.html">MIS GIFOS</a>
+          </li>
+          <a
+            class="header__add-icon header__line-of-list-elements"
+            href="./createGifos.html"
+          ></a>
+        </ul>
+      </nav>
+    </header>
+      
+    <main>
+      <section class="favorites-my-gifos" id="my-gifos">
+        <span class="favorites-my-gifos__logo favorites-my-gifos__logo--my-gifos"></span>
+        <h2 class="favorites-my-gifos__title">Mis Gifos</h2>
+        <section class="favorites-my-gifos__gifos" id="my-gifos-gifos"></section>
+      </section>
+
+      <section class="trending" id="section__trending">
+        <h2 class="trending__title">Trending GIFOS</h2>
+        <p class="trending__paragraph trending__paragraph--top">
+          Mira los últimos
+        </p>
+        <p class="trending__paragraph trending__paragraph--bottom">
+          GIFOS de nuestra comunidad.
+        </p>
+        <section class="trending__container" id="trending-container">
+          <span
+            class="trending__arrow trending__arrow--left"
+            id="arrow-left"
+          ></span>
+          <div class="trending__gifos" id="trending-gifos"></div>
+          <span
+            class="trending__arrow trending__arrow--right"
+            id="arrow-right"
+          ></span>
+        </section>
+    </main>
+
+    <footer>
+      <div class="footer__desktop-divisor">
+        <p class="footer__paragraph">Compartir en:</p>
+        <div class="footer__icons-container">
+          <a href=""><span class="footer__icon footer__facebook"></span></a>
+          <a href=""><span class="footer__icon footer__twitter"></span></a>
+          <a href=""><span class="footer__icon footer__instagram"></span></a>
+        </div>
+      </div>
+      <p class="footer__rights">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+    <script src="./apps/app.js" type="module"></script>
+  </body>
+</html>
