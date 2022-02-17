@@ -21,8 +21,11 @@ export default async function (stream) {
   videoContainer.innerHTML = `
   <video id="player" class="player"></video>
   <div id="success-container" class="none" >
-  <div class="none"></div>
-  <span id="image-upload"class="none" ></span>
+  <div id="logos-success" class="none">
+    <a id="download" class="logos-success__logo logos-success__logo-download"/></a>
+    <a id="link" class="logos-success__logo logos-success__logo-link" target="_blank"/></a>
+  </div>
+  <span id="image-upload" class="none" ></span>
   <p id="text-upload" class="none">Estamos subiendo tu GIFO</p>
   </div>
   `

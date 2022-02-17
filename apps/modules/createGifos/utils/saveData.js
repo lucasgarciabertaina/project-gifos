@@ -28,5 +28,5 @@ export default async function saveData(input) {
   myGifos.push(myGifo.id);
   localStorage.setItem(myGifo.id, JSON.stringify(myGifo));
   localStorage.setItem("myGifos", JSON.stringify(myGifos));
-  finishChargeDisplay();
+  finishChargeDisplay({ blob, myGifo });
 }

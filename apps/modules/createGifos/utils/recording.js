@@ -60,12 +60,10 @@ export default function recording(input) {
 
     container.removeChild(buttonFinally);
     buttonUpload.addEventListener(("click"), async () => {
-      
-
       container.removeChild(buttonUpload);
       container.removeChild(repeat);
       video.pause();
-      video.setAttribute("class", "player .player--active");
+      video.setAttribute("class", "player player--active");
       await saveData({ recorder, stream, blob })
     });
     repeat.addEventListener(("click"), () => {
